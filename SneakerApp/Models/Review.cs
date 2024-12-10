@@ -12,6 +12,7 @@ namespace SneakerApp.Models
 
         public DateTime Date { get; set; }
 
+        // fk cu product
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
 

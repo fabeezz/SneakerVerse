@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FMI\\SneakerVerse\\SneakerApp\\SneakerApp.csproj": {}
+    "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\SneakerApp.csproj": {}
   },
   "projects": {
-    "D:\\FMI\\SneakerVerse\\SneakerApp\\SneakerApp.csproj": {
+    "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\SneakerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FMI\\SneakerVerse\\SneakerApp\\SneakerApp.csproj",
+        "projectUniqueName": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\SneakerApp.csproj",
         "projectName": "SneakerApp",
-        "projectPath": "D:\\FMI\\SneakerVerse\\SneakerApp\\SneakerApp.csproj",
-        "packagesPath": "C:\\Users\\fabeezz\\.nuget\\packages\\",
-        "outputPath": "D:\\FMI\\SneakerVerse\\SneakerApp\\obj\\",
+        "projectPath": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\SneakerApp.csproj",
+        "packagesPath": "C:\\Users\\tudor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fabeezz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tudor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,6 +57,10 @@
               "target": "Package",
               "version": "[8.0.8, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -66,11 +69,13 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[9.0.0, )"
             }
           },
           "imports": [

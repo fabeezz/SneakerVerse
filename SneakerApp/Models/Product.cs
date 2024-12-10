@@ -22,11 +22,15 @@ namespace SneakerApp.Models
 
         public int Rating { get; set; }
 
+        // CATEGORIES
+
         [Required(ErrorMessage = "Categoria este obligatorie!")]
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
-        public virtual ICollection<Review> Reviews { get; set;}
+        // REVIEWS
+
+        public virtual ICollection<Review> Reviews { get; set; }
 
         public virtual ICollection<ProductWishlist>? ProductWishlists { get; set; }
 
