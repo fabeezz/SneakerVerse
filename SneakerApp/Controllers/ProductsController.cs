@@ -41,7 +41,30 @@ namespace SneakerApp.Controllers
         }
 
         // SHOW cu POST (adaugare review) - TBA
+        [HttpPost]
+        public IActionResult Show([FromForm] Review review)
+        {
+            review.Date = DateTime.Now;
 
+            //if (ModelState.IsValid)
+            //{
+                db.Reviews.Add(review);
+                db.SaveChanges();
+                return Redirect("/Products/Show/" + review.ProductId);
+            //}
+            //else
+            //{
+            //    Product art = db.Products.Include("Category").Include("Reviews")
+            //                   .Where(art => art.Id == review.ProductId)
+            //                   .First();
+
+            //    //return Redirect("/Products/Show/" + comm.ProductId);
+
+            //    return View(art);
+            //}
+        }
+
+        // NEW
         [HttpGet]
         public IActionResult New()
         {
@@ -70,6 +93,7 @@ namespace SneakerApp.Controllers
             }
         }
 
+        // EDIT
         [HttpGet]
         public IActionResult Edit(int id)
         {
@@ -108,6 +132,8 @@ namespace SneakerApp.Controllers
                 return View(requestProduct);
             }
         }
+
+        // DELETE
 
         public ActionResult Delete(int id)
         {

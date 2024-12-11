@@ -26,96 +26,96 @@
 <br />
 <br />
 
-@* Afisare comentarii impreuna cu butoanele de editare si stergere *@
+@*Afisare comentarii impreuna cu butoanele de editare si stergere *@
 
-@* @foreach (var comm in Model.Comments) *@
-@* { *@
-@*     <div class="container"> *@
-@*         <div class="row"> *@
-@*             <div class="col-md-2"></div> *@
+ @foreach (var rev in Model.Reviews) 
+ { 
+     <div class="container"> 
+         <div class="row"> 
+             <div class="col-md-2"></div> 
 
-@*             <div class="col-md-8"> *@
+             <div class="col-md-8"> 
 
-@*                 <div> *@
+                 <div> 
 
-@*                     <p>@comm.Content</p> *@
-@*                     <small>@comm.Date</small> *@
+                     <p>@rev.Content</p> 
+                     <small>@rev.Date</small> 
 
-@*                 </div> *@
-@*                 <br> *@
+                 </div> 
+                 <br> 
 
-@*                 <div class="d-flex"> *@
+                 <div class="d-flex"> 
 
-@*                     <div> *@
+                     <div> 
 
-@*                         <a class="btn btn-outline-primary" asp-controller="Comments" asp-action="Edit" asp-route-id="@comm.Id"> *@
-@*                             <i class="bi bi-pencil-square"></i> Editeaza *@
-@*                         </a> *@
+                         <a class="btn btn-outline-primary" asp-controller="Reviews" asp-action="Edit" asp-route-id="@rev.ReviewId"> 
+                             <i class="bi bi-pencil-square"></i> Editeaza 
+                         </a> 
 
-@*                     </div> *@
+                     </div> 
 
-@*                     <div> *@
+                     <div> 
 
-@*                         <form method="post" asp-controller="Comments" asp-action="Delete" asp-route-id="@comm.Id"> *@
+                         <form method="post" asp-controller="Reviews" asp-action="Delete" asp-route-id="@rev.ReviewId"> 
 
-@*                             <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Sterge</button> *@
+                             <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Sterge</button> 
 
-@*                         </form> *@
+                         </form> 
 
-@*                     </div> *@
+                     </div> 
 
-@*                 </div> *@
+                 </div> 
 
-@*                 <br /> *@
+                 <br /> 
 
-@*             </div> *@
+             </div> 
 
-@*             <div class="col-md-2"></div> *@
+             <div class="col-md-2"></div> 
 
-@*         </div> *@
+         </div> 
 
-@*     </div> *@
-@* } *@
+     </div> 
+ }
 
 
-@* Afisarea formularului in care se poate adauga un comentariu *@
+ @* Afisarea formularului in care se poate adauga un comentariu  *@
 
-@* <div class="container"> *@
+ <div class="container"> 
 
-@*     <div class="row"> *@
+     <div class="row"> 
 
-@*         <div class="col-md-2"></div> *@
+         <div class="col-md-2"></div> 
 
-@*         <div class="col-md-8"> *@
+         <div class="col-md-8"> 
 
-@*             <div class="card"> *@
+             <div class="card"> 
 
-@*                 <form method="post" asp-controller="Products" asp-action="Show"> *@
+                 <form method="post" asp-controller="Products" asp-action="Show"> 
 
-@*                     <div class="card-body"> *@
+                     <div class="card-body"> 
 
-@*                         <input type="hidden" name="ArticleId" value="@Model.Id" /> *@
+                         <input type="hidden" name="ProductId" value="@Model.Id" /> 
 
-@*                         <label>Continut comentariu</label> *@
-@*                         <br /> *@
+                         <label>Continut comentariu</label> 
+                         <br /> 
 
-@*                         <textarea class="form-control" name="Content"></textarea> *@
+                         <textarea class="form-control" name="Content"></textarea> 
 
-@*                         <span asp-validation-for="Content" class="text-danger"></span> *@
-@*                         <br /><br /> *@
+                         <span asp-validation-for="Description" class="text-danger"></span> 
+                         <br /><br /> 
 
-@*                         <button class="btn btn-success " type="submit">Adauga comentariul</button> *@
+                         <button class="btn btn-success " type="submit">Adauga comentariul</button> 
 
-@*                     </div> *@
+                     </div> 
 
-@*                 </form> *@
+                 </form> 
 
-@*             </div> *@
+             </div> 
 
-@*         </div> *@
+         </div> 
 
-@*         <div class="col-md-2"></div> *@
+         <div class="col-md-2"></div> 
 
-@*     </div> *@
+     </div> 
 
-@* </div> *@
+ </div> 
