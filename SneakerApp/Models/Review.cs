@@ -16,7 +16,7 @@ namespace SneakerApp.Models
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
 
-        // PASUL 6 - useri si roluri
-        public virtual ApplicationUser User { get; set; }
+        //// PASUL 6 - useri si roluri
+        //public virtual ApplicationUser User { get; set; }
     }
 }

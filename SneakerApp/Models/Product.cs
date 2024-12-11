@@ -1,5 +1,6 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SneakerApp.Models
 {
@@ -28,13 +29,16 @@ namespace SneakerApp.Models
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
+        [NotMapped]
+        public IEnumerable<SelectListItem>? Categ { get; set; }
+
         // REVIEWS
 
         public virtual ICollection<Review> Reviews { get; set; }
 
         public virtual ICollection<ProductWishlist>? ProductWishlists { get; set; }
 
-        // PASUL 6 - useri si roluri
-        public virtual ApplicationUser User { get; set; }
+        //// PASUL 6 - useri si roluri
+        //public virtual ApplicationUser User { get; set; }
     }
 }

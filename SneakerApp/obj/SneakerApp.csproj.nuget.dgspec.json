@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\SneakerApp.csproj": {}
+    "D:\\FMI\\SneakerVerse\\SneakerApp\\SneakerApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\SneakerApp.csproj": {
+    "D:\\FMI\\SneakerVerse\\SneakerApp\\SneakerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\SneakerApp.csproj",
+        "projectUniqueName": "D:\\FMI\\SneakerVerse\\SneakerApp\\SneakerApp.csproj",
         "projectName": "SneakerApp",
-        "projectPath": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\SneakerApp.csproj",
-        "packagesPath": "C:\\Users\\tudor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\obj\\",
+        "projectPath": "D:\\FMI\\SneakerVerse\\SneakerApp\\SneakerApp.csproj",
+        "packagesPath": "C:\\Users\\fabeezz\\.nuget\\packages\\",
+        "outputPath": "D:\\FMI\\SneakerVerse\\SneakerApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tudor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fabeezz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -76,6 +81,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             }
           },
           "imports": [
@@ -97,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -32,12 +32,12 @@ namespace SneakerApp.Data
             // M-M (Product-Wishlist)
             modelBuilder.Entity<ProductWishlist>()
                 .HasOne(pw => pw.Product)
-                .WithMany(pw => pw.ProductWishlists)
+                .WithMany(p => p.ProductWishlists)
                 .HasForeignKey(pw => pw.ProductId);
 
             modelBuilder.Entity<ProductWishlist>()
                 .HasOne(pw => pw.Wishlist)
-                .WithMany(pw => pw.ProductWishlists)
+                .WithMany(w => w.ProductWishlists)
                 .HasForeignKey(pw => pw.WishlistId);
 
             // O-M (Product-Category)
@@ -50,7 +50,15 @@ namespace SneakerApp.Data
             modelBuilder.Entity<Review>()
                 .HasOne<Product>(r => r.Product)
                 .WithMany(p => p.Reviews)
-                .HasForeignKey(r => r.ProductId);
+                .HasForeignKey(r => r.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            //// Review-ApplicationUser relationship
+            //modelBuilder.Entity<Review>()
+            //    .HasOne<ApplicationUser>(r => r.User)
+            //    .WithMany()
+            //    .HasForeignKey(r => r.UserId)
+            //    .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
 
         }
     }
