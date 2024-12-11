@@ -52,6 +52,72 @@ namespace SneakerApp.Controllers
             return View(product);
         }
 
+        [HttpPost]
+        public IActionResult New(Product product)
+        {
+            product.Categ = GetAllCategories();
+
+            if (ModelState.IsValid)
+            {
+                db.Products.Add(product);
+                db.SaveChanges();
+                TempData["message"] = "Produsul a fost adaugat";
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(product);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+
+            Product product = db.Products.Include("Category")
+                                         .Where(art => art.Id == id)
+                                         .First();
+
+            product.Categ = GetAllCategories();
+
+            return View(product);
+
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, Product requestProduct)
+        {
+            Product product = db.Products.Find(id);
+
+            if (ModelState.IsValid)
+            {
+                product.Name = requestProduct.Name;
+                product.Description = requestProduct.Description;
+                product.Price = requestProduct.Price;
+                product.Stock = requestProduct.Stock;
+                product.Rating = requestProduct.Rating;
+                product.CategoryId = requestProduct.CategoryId;
+                TempData["message"] = "Produsul a fost modificat";
+                db.SaveChanges();
+                return RedirectToAction("Index");
+
+            }
+            else
+            {
+                requestProduct.Categ = GetAllCategories();
+                return View(requestProduct);
+            }
+        }
+
+        public ActionResult Delete(int id)
+        {
+            Product product = db.Products.Find(id);
+            db.Products.Remove(product);
+            db.SaveChanges();
+            TempData["message"] = "Articolul a fost sters";
+            return RedirectToAction("Index");
+        }
+
         [NonAction]
         public IEnumerable<SelectListItem> GetAllCategories()
         {
