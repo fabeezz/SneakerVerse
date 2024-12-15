@@ -26,7 +26,9 @@ namespace SneakerApp.Models
         // CATEGORIES
 
         [Required(ErrorMessage = "Categoria este obligatorie!")]
+        // FK
         public int? CategoryId { get; set; }
+
         public virtual Category? Category { get; set; }
 
         [NotMapped]
@@ -38,7 +40,10 @@ namespace SneakerApp.Models
 
         public virtual ICollection<ProductWishlist>? ProductWishlists { get; set; }
 
-        //// PASUL 6 - useri si roluri
-        //public virtual ApplicationUser User { get; set; }
+        // PASUL 6 - useri si roluri
+        public string? UserId { get; set; }
+
+        // un articol postat de catre un user
+        public virtual ApplicationUser? User { get; set; }
     }
 }

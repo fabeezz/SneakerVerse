@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using SneakerApp.Data;
 using SneakerApp.Models;
 
@@ -6,13 +7,20 @@ namespace SneakerApp.Controllers
 {
     public class CategoriesController : Controller
     {
+        // Pasul 10: Useri si roluri
         private readonly ApplicationDbContext db;
-
-        public CategoriesController(ApplicationDbContext context)
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        public CategoriesController(
+        ApplicationDbContext context,
+        UserManager<ApplicationUser> userManager,
+        RoleManager<IdentityRole> roleManager
+        )
         {
             db = context;
+            _userManager = userManager;
+            _roleManager = roleManager;
         }
-
         // INDEX
         public IActionResult Index()
         {

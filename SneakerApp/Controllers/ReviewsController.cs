@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using SneakerApp.Data;
 using SneakerApp.Models;
 
@@ -6,10 +7,19 @@ namespace SneakerApp.Controllers
 {
     public class ReviewsController : Controller
     {
+        // Pasul 10: Useri si roluri
         private readonly ApplicationDbContext db;
-        public ReviewsController(ApplicationDbContext context)
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        public ReviewsController(
+        ApplicationDbContext context,
+        UserManager<ApplicationUser> userManager,
+        RoleManager<IdentityRole> roleManager
+        )
         {
             db = context;
+            _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         // EDIT

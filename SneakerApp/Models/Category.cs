@@ -10,6 +10,7 @@ namespace SneakerApp.Models
         [Required(ErrorMessage = "Numele categoriei este obligatoriu")]
         public string CategoryName { get; set; }
 
+        // dintr o categorie fac parte mai multe articole
         public virtual ICollection<Product> Products { get; set; }
     }
 }
