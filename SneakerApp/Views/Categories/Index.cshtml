@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Lista categorii";
+    ViewBag.Title = "CATEGORII";
 }
 
 <h2>@ViewBag.Title</h2>
@@ -10,24 +10,19 @@
     <h1>@ViewBag.message</h1>
 }
 
-<a href="/Articles/Index">Inapoi la articole</a>
-<br />
-<br />
-
 @foreach (SneakerApp.Models.Category category in ViewBag.Categories)
 {
     <div class="form-group">
-        <label asp-for="@category.CategoryName" class="form-label">Denumire categorie</label>
         <div><i class="bi bi-globe"></i> @category.CategoryName</div>
     </div>
     <br />
-    <a class="btn alert-success" asp-controller="Categories" asp-action="Show" asp-route-id="@category.Id">Afisare categorie</a>
-    <a class="btn alert-success" asp-controller="Categories" asp-action="Edit" asp-route-id="@category.Id">Editare categorie</a>
+    <a class="btn alert-success" asp-controller="Categories" asp-action="Show" asp-route-id="@category.Id">Afisare</a>
+    <a class="btn alert-success" asp-controller="Categories" asp-action="Edit" asp-route-id="@category.Id">Editare</a>
     <br />
     <br />
 
 }
 <br />
-<a class="btn btn-success" asp-controller="Categories" asp-action="New">Adauga o noua categorie</a>
+<a class="btn btn-success" asp-controller="Categories" asp-action="New">Categorie Noua</a>
 <br />
 

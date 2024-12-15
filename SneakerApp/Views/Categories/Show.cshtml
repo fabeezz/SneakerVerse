@@ -4,22 +4,20 @@
 }
 
 
-<h2>@ViewBag.Title</h2>
+<h2>@Model.CategoryName</h2>
 
 <br />
-
-<p>@Model.CategoryName</p>
 
 
 <form method="post" asp-controller="Categories" asp-action="Delete" asp-route-id="@Model.Id">
 
-    <button class="btn btn-danger" type="submit">Sterge categoria</button>
+    <button class="btn btn-danger" type="submit">Sterge</button>
 
 </form>
 
 <br />
 
-<a class="btn alert-success" href="/Categories/Index/">Afisare lista categorii</a>
+<a class="btn alert-success" href="/Categories/Index/">Afisare categorii</a>
 
 <br />
 <hr />

@@ -1,9 +1,6 @@
 ﻿@model SneakerApp.Models.Product
 
-
 <h2 class="text-center mt-5">Adaugare articol</h2>
-
-<br />
 
 <div class="container mt-5">
     <div class="row">
@@ -14,74 +11,73 @@
                 <div asp-validation-summary="All" class="text-danger"></div>
                 
                 <div class="form-group">
-                    <label asp-for="Name" class="form-label">Titlu Produs</label>
+                    <label asp-for="Name" class="form-label">Titlu: </label>
                     <br />
                     <input asp-for="Name" class="form-control" />
 
-                    <!-- Mesaj de validare pentru titlu -->
                     <span asp-validation-for="Name" class="text-danger"></span>
 
                     <br /><br />
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Description" class="form-label">Descriere Produs</label>
+                    <label asp-for="Description" class="form-label">Descriere: </label>
                     <br />
                     <textarea asp-for="Description" class="form-control"></textarea>
-
-                    <!-- Mesaj de validare pentru continut -->
+                 
                     <span asp-validation-for="Description" class="text-danger"></span>
 
                     <br /><br />
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Price" class="form-label">Pret Produs</label>
+                    <label asp-for="Price" class="form-label">Pret: </label>
                     <br />
-                    <textarea asp-for="Price" class="form-control"></textarea>
-
-                    <!-- Mesaj de validare pentru continut -->
+                    <input asp-for="Price" class="form-control"></textarea>
+                   
                     <span asp-validation-for="Price" class="text-danger"></span>
 
                     <br /><br />
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Stock" class="form-label">Stoc Produs</label>
+                    <label asp-for="Stock" class="form-label">Stoc: </label>
                     <br />
-                    <textarea asp-for="Stock" class="form-control"></textarea>
-
-                    <!-- Mesaj de validare pentru continut -->
+                    <input asp-for="Stock" class="form-control"></textarea>
+               
                     <span asp-validation-for="Stock" class="text-danger"></span>
 
                     <br /><br />
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Rating" class="form-label">Rating Produs</label>
+                    <label asp-for="Rating" class="form-label">Rating: </label>
                     <br />
-                    <textarea asp-for="Rating" class="form-control"></textarea>
+                    <select asp-for="Rating" class="form-control">
+                        <option value="">Select rating</option>
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    </select>
 
-                    <!-- Mesaj de validare pentru continut -->
                     <span asp-validation-for="Rating" class="text-danger"></span>
-
                     <br /><br />
                 </div>
 
                 <div class="form-group">
-                    <label for="CategoryId">Selectati categoria</label>
+                    <label for="CategoryId">Categorie: </label>
                     <br />
                     <select asp-for="CategoryId" asp-items="Model.Categ" class="form-control">
-                        <option value="">Selectati categoria</option>
+                        <option value="">Select category</option>
                     </select>
 
-                    <!-- Mesaj de validare pentru CategoryId -->
                     <span asp-validation-for="CategoryId" class="text-danger"></span>
 
                     <br />
                 </div>
                 <br />
-                <button class="btn btn-success" type="submit">Adauga articol</button>
+                <button class="btn btn-success" type="submit">Adauga produs</button>
 
             </form>
         </div>

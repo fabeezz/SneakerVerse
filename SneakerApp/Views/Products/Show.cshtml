@@ -15,7 +15,7 @@
 
         <form method="post" asp-controller="Products" asp-action="Delete" asp-route-id="@Model.Id">
 
-            <button class="btn btn-danger" type="submit">Sterge articol</button>
+            <button class="btn btn-danger" type="submit">Sterge produs</button>
 
         </form>
 
@@ -49,7 +49,7 @@
                      <div> 
 
                          <a class="btn btn-outline-primary" asp-controller="Reviews" asp-action="Edit" asp-route-id="@rev.ReviewId"> 
-                             <i class="bi bi-pencil-square"></i> Editeaza 
+                             <i class="bi bi-pencil-square"></i>  Editeaza 
                          </a> 
 
                      </div> 
@@ -58,7 +58,7 @@
 
                          <form method="post" asp-controller="Reviews" asp-action="Delete" asp-route-id="@rev.ReviewId"> 
 
-                             <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Sterge</button> 
+                             <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i> Sterge</button> 
 
                          </form> 
 
@@ -96,7 +96,7 @@
 
                          <input type="hidden" name="ProductId" value="@Model.Id" /> 
 
-                         <label>Continut comentariu</label> 
+                         <label>Continut review: </label> 
                          <br /> 
 
                          <textarea class="form-control" name="Content"></textarea> 
@@ -104,7 +104,7 @@
                          <span asp-validation-for="Description" class="text-danger"></span> 
                          <br /><br /> 
 
-                         <button class="btn btn-success " type="submit">Adauga comentariul</button> 
+                         <button class="btn btn-success " type="submit">Adauga review</button> 
 
                      </div> 
 
