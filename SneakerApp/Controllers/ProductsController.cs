@@ -1,9 +1,10 @@
-﻿using SneakerApp.Data;
-using SneakerApp.Models;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
+using SneakerApp.Data;
+using SneakerApp.Models;
 
 namespace SneakerApp.Controllers
 {
@@ -26,14 +27,18 @@ namespace SneakerApp.Controllers
 
         // INDEX (produse + categorie)
         [HttpGet]
+        [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Index()
         {
-            var products = db.Products.Include("Category");
+            var products = db.Products.Include("Category")
+                                      .Include("User");
+
             ViewBag.Products = products;
 
             if (TempData.ContainsKey("message"))
             {
                 ViewBag.Message = TempData["message"];
+                ViewBag.Alert = TempData["messageType"];
             }
 
             return View();
@@ -41,41 +46,57 @@ namespace SneakerApp.Controllers
 
         // SHOW (afisare produs pe baza id-ului)
         [HttpGet]
+        [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Show(int id)
         {
-            Product product = db.Products.Include("Category").Include("Reviews")
+            Product product = db.Products.Include("Category")
+                                         .Include("Reviews")
+                                         .Include("User")
+                                         .Include("Reviews.User")
                               .Where(prod => prod.Id == id)
                               .First();
+
+            SetAccessRights();
 
             return View(product);
         }
 
         // SHOW cu POST (adaugare review) - TBA
         [HttpPost]
+        [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Show([FromForm] Review review)
         {
             review.Date = DateTime.Now;
 
-            //if (ModelState.IsValid)
-            //{
-                db.Reviews.Add(review);
-                db.SaveChanges();
-                return Redirect("/Products/Show/" + review.ProductId);
-            //}
-            //else
-            //{
-            //    Product art = db.Products.Include("Category").Include("Reviews")
-            //                   .Where(art => art.Id == review.ProductId)
-            //                   .First();
+            //preluam id-ul utilizatorului care posteaza comentariul
+            review.UserId = _userManager.GetUserId(User);
 
-            //    //return Redirect("/Products/Show/" + comm.ProductId);
+            if (ModelState.IsValid)
+            {
+            db.Reviews.Add(review);
+            db.SaveChanges();
+            return Redirect("/Products/Show/" + review.ProductId);
+            }
+            else
+            {
+                Product prod = db.Products.Include("Category")
+                                          .Include("User")
+                                          .Include("Reviews")
+                                          .Include("Reviews.User")
+                                          .Where(prod => prod.Id == review.ProductId)
+                                          .First();
 
-            //    return View(art);
-            //}
+               //return Redirect("/Products/Show/" + comm.ProductId);
+
+                SetAccessRights();
+
+                return View(prod);
+            }
         }
 
         // NEW
         [HttpGet]
+        [Authorize(Roles = "Editor,Admin")]
         public IActionResult New()
         {
             Product product = new Product();
@@ -86,54 +107,88 @@ namespace SneakerApp.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Editor,Admin")]
         public IActionResult New(Product product)
         {
-            product.Categ = GetAllCategories();
+
+
+            // preluam id ul userului care posteza produsul
+            product.UserId = _userManager.GetUserId(User);
 
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
                 db.SaveChanges();
                 TempData["message"] = "Produsul a fost adaugat";
+                TempData["messageType"] = "alert-success";
                 return RedirectToAction("Index");
             }
             else
             {
+                product.Categ = GetAllCategories();
                 return View(product);
             }
         }
 
         // EDIT
         [HttpGet]
+        // adminii editeaza orice produs, in timp ce editorul doar pe cel pe care l-a adaugat
+        [Authorize(Roles = "Editor,Admin")]
         public IActionResult Edit(int id)
         {
 
             Product product = db.Products.Include("Category")
-                                         .Where(art => art.Id == id)
+                                         .Where(prod => prod.Id == id)
                                          .First();
 
             product.Categ = GetAllCategories();
 
-            return View(product);
+            if ((_userManager.GetUserId(User) == product.UserId) || User.IsInRole("Admin"))
+            {
+                return View(product);
+            }
+            else
+            {
+
+                TempData["message"] = "Nu aveti dreptul sa modificati un produs al altui brand!";
+                TempData["messageType"] = "alert-danger";
+                return RedirectToAction("Index");
+            }
+
+            return View();
 
         }
 
+        // se verifica rolul utilizatorilor care au dreptul sa editeze
         [HttpPost]
+        [Authorize(Roles = "Editor,Admin")]
         public IActionResult Edit(int id, Product requestProduct)
         {
             Product product = db.Products.Find(id);
 
             if (ModelState.IsValid)
             {
-                product.Name = requestProduct.Name;
-                product.Description = requestProduct.Description;
-                product.Price = requestProduct.Price;
-                product.Stock = requestProduct.Stock;
-                product.Rating = requestProduct.Rating;
-                product.CategoryId = requestProduct.CategoryId;
-                TempData["message"] = "Produsul a fost modificat";
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if ((_userManager.GetUserId(User) == product.UserId) || User.IsInRole("Admin"))
+                {
+                    product.Name = requestProduct.Name;
+                    product.Description = requestProduct.Description;
+                    product.Price = requestProduct.Price;
+                    product.Stock = requestProduct.Stock;
+                    product.Rating = requestProduct.Rating;
+                    product.CategoryId = requestProduct.CategoryId;
+                    TempData["message"] = "Produsul a fost modificat";
+                    TempData["messageType"] = "alert-success";
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    product.Categ = GetAllCategories();
+                    TempData["message"] = "Nu aveti dreptul sa modificati un produs al altui brand!";
+                    TempData["messageType"] = "alert-danger";
+                    return RedirectToAction("Index");
+                }
+
 
             }
             else
@@ -145,13 +200,41 @@ namespace SneakerApp.Controllers
 
         // DELETE
 
+        [HttpPost]
+        [Authorize(Roles = "Editor,Admin")]
         public ActionResult Delete(int id)
         {
             Product product = db.Products.Find(id);
-            db.Products.Remove(product);
-            db.SaveChanges();
-            TempData["message"] = "Articolul a fost sters";
-            return RedirectToAction("Index");
+
+            if ((_userManager.GetUserId(User) == product.UserId) || User.IsInRole("Admin"))
+            {
+                db.Products.Remove(product);
+                db.SaveChanges();
+                TempData["message"] = "Produsul a fost sters";
+                TempData["messageType"] = "alert-success";
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                TempData["message"] = "Nu aveti dreptul sa stergeti un produs al altui brand!";
+                TempData["messageType"] = "alert-danger";
+                return RedirectToAction("Index");
+            }
+        }
+
+        // conditii de afisare pt butoanele de edit si delete aflate in view uri
+
+        private void SetAccessRights()
+        {
+            ViewBag.Buttons = false;
+
+            if (User.IsInRole("Editor"))
+            {
+                ViewBag.Buttons = true;
+            }
+
+            ViewBag.CurrentUser = _userManager.GetUserId(User);
+            ViewBag.IsAdmin = User.IsInRole("Admin");
         }
 
         [NonAction]

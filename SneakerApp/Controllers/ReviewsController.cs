@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SneakerApp.Data;
 using SneakerApp.Models;
@@ -43,7 +44,7 @@ namespace SneakerApp.Controllers
 
                 db.SaveChanges();
 
-                return Redirect("/Articles/Show/" + comm.ReviewId);
+                return Redirect("/Products/Show/" + comm.ReviewId);
             }
             else
             {
@@ -54,6 +55,7 @@ namespace SneakerApp.Controllers
 
         // DELETE
         [HttpPost]
+        [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Delete(int id)
         {
             Review comm = db.Reviews.Find(id);

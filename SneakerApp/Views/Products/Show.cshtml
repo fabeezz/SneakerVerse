@@ -7,19 +7,22 @@
 
 <div class="card">
 
-    <partial name="ProductInfo" model="Model"></partial>
+        <partial name="ProductInfo" model="Model"></partial>
 
-    <div class="d-flex flex-row justify-content-between">
+    @if(ViewBag.IsAdmin == true || (ViewBag.CurrentUser == Model.UserId && ViewBag.Buttons == true))
+    {
+        <div class="d-flex flex-row justify-content-between">
 
-        <a class="btn btn-success" asp-controller="Products" asp-action="Edit" asp-route-id="@Model.Id">Editeaza produs</a>
+            <a class="btn btn-success" asp-controller="Products" asp-action="Edit" asp-route-id="@Model.Id">Editeaza produs</a>
 
-        <form method="post" asp-controller="Products" asp-action="Delete" asp-route-id="@Model.Id">
+            <form method="post" asp-controller="Products" asp-action="Delete" asp-route-id="@Model.Id">
 
-            <button class="btn btn-danger" type="submit">Sterge produs</button>
+                <button class="btn btn-danger" type="submit">Sterge produs</button>
 
-        </form>
+            </form>
 
-    </div>
+        </div>
+    }
 
 </div>
 
@@ -28,43 +31,48 @@
 
 @*Afisare comentarii impreuna cu butoanele de editare si stergere *@
 
- @foreach (var rev in Model.Reviews) 
- { 
-     <div class="container"> 
-         <div class="row"> 
-             <div class="col-md-2"></div> 
+@foreach (var rev in Model.Reviews) 
+{ 
+    <div class="container"> 
+        <div class="row"> 
+            <div class="col-md-2"></div> 
 
-             <div class="col-md-8"> 
+            <div class="col-md-8"> 
 
-                 <div> 
+                <div> 
 
-                     <p>@rev.Content</p> 
-                     <small>@rev.Date</small> 
+                    <p>@rev.Content</p> 
+                    <small>@rev.Date</small>
+                    <strong><i class="bi bi-person">@rev.User.UserName</i></strong>
 
-                 </div> 
-                 <br> 
+                </div> 
+                <br> 
 
-                 <div class="d-flex"> 
+                @if(rev.UserId == ViewBag.CurrentUser || ViewBag.IsAdmin == true)
+                {
+                    <div class="d-flex">
 
-                     <div> 
+                        <div>
 
-                         <a class="btn btn-outline-primary" asp-controller="Reviews" asp-action="Edit" asp-route-id="@rev.ReviewId"> 
-                             <i class="bi bi-pencil-square"></i>  Editeaza 
-                         </a> 
+                            <a class="btn btn-outline-primary" asp-controller="Reviews" asp-action="Edit" asp-route-id="@rev.ReviewId">
+                                <i class="bi bi-pencil-square"></i>  Editeaza
+                            </a>
 
-                     </div> 
+                        </div>
 
-                     <div> 
+                        <div>
 
-                         <form method="post" asp-controller="Reviews" asp-action="Delete" asp-route-id="@rev.ReviewId"> 
+                            <form method="post" asp-controller="Reviews" asp-action="Delete" asp-route-id="@rev.ReviewId">
 
-                             <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i> Sterge</button> 
+                                <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i> Sterge</button>
 
-                         </form> 
+                            </form>
 
-                     </div> 
+                        </div>
 
-                 </div> 
+                    </div>
+                }
+
 
                  <br /> 
 
@@ -104,7 +112,7 @@
                          <span asp-validation-for="Description" class="text-danger"></span> 
                          <br /><br /> 
 
-                         <button class="btn btn-success " type="submit">Adauga review</button> 
+                         <button class="btn btn-success" type="submit">Adauga review</button> 
 
                      </div> 
 
