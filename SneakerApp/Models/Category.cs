@@ -11,6 +11,6 @@ namespace SneakerApp.Models
         public string CategoryName { get; set; }
 
         // dintr o categorie fac parte mai multe articole
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product>? Products { get; set; }
     }
 }

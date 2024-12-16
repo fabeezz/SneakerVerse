@@ -61,7 +61,7 @@ namespace SneakerApp.Controllers
                 db.SaveChanges();
                 TempData["message"] = "Categoria a fost adaugata";
                 return RedirectToAction("Index");
-            }
+        }
 
             else
             {
@@ -86,17 +86,17 @@ namespace SneakerApp.Controllers
                                              .Include("Products.Reviews")
                                              .Where(c => c.Id == id)
                                              .First();
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
 
                 category.CategoryName = requestCategory.CategoryName;
                 db.SaveChanges();
                 Console.WriteLine("Yupiii");
                 TempData["message"] = "Categoria a fost modificata!";
                 return RedirectToAction("Index");
-            }
+            //}
         
-            return View(requestCategory);
+            //return View(requestCategory);
         }
 
         // DELETE
