@@ -18,6 +18,7 @@ namespace SneakerApp.Data
         public DbSet<ProductWishlist> ProductWishlists { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -41,7 +42,7 @@ namespace SneakerApp.Data
                 .WithMany(w => w.ProductWishlists)
                 .HasForeignKey(pw => pw.WishlistId);
 
-            // O-M (Product-Category)
+            // O-M (Category-Product)
             modelBuilder.Entity<Product>()
                 .HasOne<Category>(p => p.Category)
                 .WithMany(c => c.Products)
@@ -51,8 +52,13 @@ namespace SneakerApp.Data
             modelBuilder.Entity<Review>()
                 .HasOne<Product>(r => r.Product)
                 .WithMany(p => p.Reviews)
-                .HasForeignKey(r => r.ProductId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .HasForeignKey(r => r.ProductId);
+
+            // O-M (Product-Rating)
+            modelBuilder.Entity<Rating>()
+                .HasOne<Product>(rt => rt.Product)
+                .WithMany(p => p.Ratings)
+                .HasForeignKey(rt => rt.ProductId);
 
             //// Review-ApplicationUser relationship
             //modelBuilder.Entity<Review>()

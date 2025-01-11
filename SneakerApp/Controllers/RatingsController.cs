@@ -6,13 +6,13 @@ using SneakerApp.Models;
 
 namespace SneakerApp.Controllers
 {
-    public class ReviewsController : Controller
+    public class RatingsController : Controller
     {
         // Pasul 10: Useri si roluri
         private readonly ApplicationDbContext db;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        public ReviewsController(
+        public RatingsController(
         ApplicationDbContext context,
         UserManager<ApplicationUser> userManager,
         RoleManager<IdentityRole> roleManager
@@ -23,84 +23,82 @@ namespace SneakerApp.Controllers
             _roleManager = roleManager;
         }
 
-        // Editarea unui review asociat unui produs
-        // Se poate edita un review doar de catre utilizatorul
-        // care a postat review-ul respectiv
+        // Editarea unui rating asociat unui produs
+        // Se poate edita un rating doar de catre utilizatorul
+        // care a postat rating-ul respectiv
 
         [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Edit(int id)
         {
-            Review comm = db.Reviews.Find(id);
+            Rating rat = db.Ratings.Find(id);
 
-            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            if (rat.UserId == _userManager.GetUserId(User))
             {
-                return View(comm);
+                return View(rat);
             }
             else
             {
-                TempData["message"] = "Nu aveti dreptul sa editati review-ul";
+                TempData["message"] = "Nu aveti dreptul sa editati rating-ul";
                 TempData["messageType"] = "alert-danger";
                 return RedirectToAction("Index", "Products");
             }
 
         }
 
-
         [HttpPost]
         [Authorize(Roles = "User,Editor,Admin")]
-        public IActionResult Edit(int id, Review requestReview)
+        public IActionResult Edit(int id, Rating requestRating)
         {
-            Review comm = db.Reviews.Find(id);
+            Rating rat = db.Ratings.Find(id);
 
-            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            if (rat.UserId == _userManager.GetUserId(User))
             {
                 if (ModelState.IsValid)
                 {
 
-                    comm.Content = requestReview.Content;
+                    rat.Score = requestRating.Score;
 
                     db.SaveChanges();
 
-                    return Redirect("/Products/Show/" + comm.ProductId);
+                    return Redirect("/Products/Show/" + rat.ProductId);
                 }
                 else
                 {
-                    return View(requestReview);
+                    return View(requestRating);
                 }
             }
             else
             {
-                TempData["message"] = "Nu aveti dreptul sa editati review-ul";
+                TempData["message"] = "Nu aveti dreptul sa editati rating-ul";
                 TempData["messageType"] = "alert-danger";
                 return RedirectToAction("Index", "Products");
             }
 
         }
 
+
         // DELETE
-        // Se poate sterge review-ul doar de catre userii cu rolul de Admin
-        // sau de catre utilizatorii cu rolul de User sau Editor (doar daca
-        // acel review a fost postat de catre acestia
+        // Se poate sterge rating-ul doar de catre utilizatorii 
+        // care au postat rating-ul respectiv
         [HttpPost]
         [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Delete(int id)
         {
-            Review comm = db.Reviews.Find(id);
+            Rating rat = db.Ratings.Find(id);
 
-            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            if (rat.UserId == _userManager.GetUserId(User))
             {
-                db.Reviews.Remove(comm);
+                db.Ratings.Remove(rat);
                 db.SaveChanges();
-                return Redirect("/Products/Show/" + comm.ProductId);
+                return Redirect("/Products/Show/" + rat.ProductId);
             }
             else
             {
-                TempData["message"] = "Nu aveti dreptul sa editati review-ul";
+                TempData["message"] = "Nu aveti dreptul sa editati rating-ul";
                 TempData["messageType"] = "alert-danger";
                 return RedirectToAction("Index", "Products");
             }
 
         }
-
     }
 }

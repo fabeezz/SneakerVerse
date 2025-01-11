@@ -2,21 +2,19 @@
 
 namespace SneakerApp.Models
 {
-    public class Review
+    public class Rating
     {
         [Key]
-        public int ReviewId { get; set; }
+        public int RatingId { get; set; }
 
-        [Required(ErrorMessage = "Continutul este obligatoriu")]
-        public string Content { get; set; }
-
-        public DateTime Date { get; set; }
+        [Required(ErrorMessage = "Scorul este obligatoriu")]
+        public int Score { get; set; }
 
         // fk cu product
         public int ProductId { get; set; }
         public virtual Product? Product { get; set; }
 
-        // PASUL 6 - useri si roluri
+        // fk cu user
         public string? UserId { get; set; }
         public virtual ApplicationUser? User { get; set; }
     }

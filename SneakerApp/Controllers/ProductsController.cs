@@ -155,7 +155,6 @@ namespace SneakerApp.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View();
 
         }
 
@@ -174,7 +173,7 @@ namespace SneakerApp.Controllers
                     product.Description = requestProduct.Description;
                     product.Price = requestProduct.Price;
                     product.Stock = requestProduct.Stock;
-                    product.Rating = requestProduct.Rating;
+                    //product.Rating = requestProduct.Rating;
                     product.CategoryId = requestProduct.CategoryId;
                     TempData["message"] = "Produsul a fost modificat";
                     TempData["messageType"] = "alert-success";

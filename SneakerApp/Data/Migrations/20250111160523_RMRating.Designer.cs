@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SneakerApp.Data;
 
@@ -11,9 +12,11 @@ using SneakerApp.Data;
 namespace SneakerApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250111160523_RMRating")]
+    partial class RMRating
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -302,32 +305,6 @@ namespace SneakerApp.Data.Migrations
                     b.ToTable("ProductWishlists");
                 });
 
-            modelBuilder.Entity("SneakerApp.Models.Rating", b =>
-                {
-                    b.Property<int>("RatingId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RatingId"));
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Score")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("RatingId");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Ratings");
-                });
-
             modelBuilder.Entity("SneakerApp.Models.Review", b =>
                 {
                     b.Property<int>("ReviewId")
@@ -462,29 +439,12 @@ namespace SneakerApp.Data.Migrations
                     b.Navigation("Wishlist");
                 });
 
-            modelBuilder.Entity("SneakerApp.Models.Rating", b =>
-                {
-                    b.HasOne("SneakerApp.Models.Product", "Product")
-                        .WithMany("Ratings")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SneakerApp.Models.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("Product");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("SneakerApp.Models.Review", b =>
                 {
                     b.HasOne("SneakerApp.Models.Product", "Product")
                         .WithMany("Reviews")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("SneakerApp.Models.ApplicationUser", "User")
@@ -511,8 +471,6 @@ namespace SneakerApp.Data.Migrations
             modelBuilder.Entity("SneakerApp.Models.Product", b =>
                 {
                     b.Navigation("ProductWishlists");
-
-                    b.Navigation("Ratings");
 
                     b.Navigation("Reviews");
                 });

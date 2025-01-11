@@ -21,8 +21,6 @@ namespace SneakerApp.Models
         [Required(ErrorMessage = "Stocul este obligatoriu!")]
         public int Stock { get; set; }
 
-        public int Rating { get; set; }
-
         // CATEGORIES
 
         [Required(ErrorMessage = "Categoria este obligatorie!")]
@@ -35,8 +33,10 @@ namespace SneakerApp.Models
         public IEnumerable<SelectListItem>? Categ { get; set; }
 
         // REVIEWS
-
         public virtual ICollection<Review>? Reviews { get; set; }
+
+        // RATINGS
+        public virtual ICollection<Rating>? Ratings { get; set; }
 
         public virtual ICollection<ProductWishlist>? ProductWishlists { get; set; }
 
