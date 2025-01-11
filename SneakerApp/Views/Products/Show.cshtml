@@ -1,7 +1,7 @@
 ﻿@model SneakerApp.Models.Product
 
 
-@* Afisarea unui articol impreuna cu categoria din care face *@
+@* Afisarea unui PRODUS impreuna cu categoria din care face *@
 
 <br />
 
@@ -41,6 +41,7 @@
 
                 <div> 
 
+                    <p>@rev.Score</p>
                     <p>@rev.Content</p> 
                     <small>@rev.Date</small>
                     <strong><i class="bi bi-person">@rev.User.UserName</i></strong>
@@ -110,13 +111,27 @@
                          <textarea class="form-control" name="Content"></textarea> 
 
                          <span asp-validation-for="Description" class="text-danger"></span> 
-                         <br /><br /> 
+                         <br /><br />
 
-                         <button class="btn btn-success" type="submit">Adauga review</button> 
+                        <label>Rating (optional): </label>
+                        <br />
+                        <select name="Score">
+                            <option value="-1" selected>Alege un rating</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <button class="btn btn-success" type="submit">Adauga review</button> 
+
 
                      </div> 
 
                  </form> 
+
+
 
              </div> 
 

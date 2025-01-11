@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using SneakerApp.Data;
 using SneakerApp.Models;
@@ -25,15 +26,43 @@ namespace SneakerApp.Controllers
             _roleManager = roleManager;
         }
 
+        public double AverageRating(int productId)
+        {
+            var productRatings = db.Reviews
+                       .Where(r => r.ProductId == productId && r.Score.HasValue)
+                       .Select(r => r.Score.Value)
+                       .ToList();
+
+            double averageRating = productRatings.Any() ? productRatings.Average() : 0;
+
+            return averageRating;
+        }
+
         // INDEX (produse + categorie)
         [HttpGet]
         [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Index()
         {
-            var products = db.Products.Include("Category")
-                                      .Include("User");
+            var products = db.Products.Include("Category").Include("User").ToList();
+
+            // Dictionary to store product Id and average score
+            var productAverages = new Dictionary<int, double?>();
+
+            foreach (var prod in products)
+            {
+                // Force client-side evaluation using ToList
+                var avgScore = db.Reviews
+                                 .Where(r => r.ProductId == prod.Id)
+                                 .Select(r => r.Score)
+                                 .ToList() // Executes the query
+                                 .DefaultIfEmpty(null)
+                                 .Average();
+
+                productAverages[prod.Id] = avgScore; // Store the average score
+            }
 
             ViewBag.Products = products;
+            ViewBag.Averages = productAverages; // Pass averages to the view
 
             if (TempData.ContainsKey("message"))
             {
@@ -43,6 +72,8 @@ namespace SneakerApp.Controllers
 
             return View();
         }
+
+
 
         // SHOW (afisare produs pe baza id-ului)
         [HttpGet]
@@ -68,14 +99,17 @@ namespace SneakerApp.Controllers
         {
             review.Date = DateTime.Now;
 
+            if (review.Score == -1)
+                review.Score = null;
+
             //preluam id-ul utilizatorului care posteaza comentariul
             review.UserId = _userManager.GetUserId(User);
 
             if (ModelState.IsValid)
             {
-            db.Reviews.Add(review);
-            db.SaveChanges();
-            return Redirect("/Products/Show/" + review.ProductId);
+                db.Reviews.Add(review);
+                db.SaveChanges();
+                return Redirect("/Products/Show/" + review.ProductId);
             }
             else
             {
@@ -86,7 +120,7 @@ namespace SneakerApp.Controllers
                                           .Where(prod => prod.Id == review.ProductId)
                                           .First();
 
-               //return Redirect("/Products/Show/" + comm.ProductId);
+                //return Redirect("/Products/Show/" + comm.ProductId);
 
                 SetAccessRights();
 

@@ -10,6 +10,8 @@ namespace SneakerApp.Models
         [Required(ErrorMessage = "Continutul este obligatoriu")]
         public string Content { get; set; }
 
+        public int? Score { get; set; }
+
         public DateTime Date { get; set; }
 
         // fk cu product

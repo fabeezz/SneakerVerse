@@ -8,15 +8,39 @@
 <form asp-action="Edit" asp-controller="Reviews" asp-route-id="@Model.ReviewId" method="post">
 
     <div class="form-group">
-        <label asp-for="Content" class="form-label">Continut comentariu</label>
-        <br />
-        <textarea asp-for="Content" class="form-control"></textarea>
-        <span asp-validation-for="Content" class="text-danger"></span>
+
+        @if (ViewBag.Miau == true)
+        {
+            <label asp-for="Content" class="form-label">Continut comentariu</label>
+            <br />
+            <textarea asp-for="Content" class="form-control"></textarea>
+            <span asp-validation-for="Content" class="text-danger"></span>
+
+            <label>Rating (optional): </label>
+            <br />
+            <select name="Score">
+                <option value="-1" >Alege un rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        }
+        else
+        {
+            <label asp-for="Content" class="form-label">Continut review</label>
+            <br />
+            <textarea asp-for="Content" class="form-control"></textarea>
+            <span asp-validation-for="Content" class="text-danger"></span>
+
+        }
+
     </div>
 
     <br /><br />
 
-    <button class="btn btn-primary" type="submit">Editeaza comentariul</button>
+    <button class="btn btn-primary" type="submit">Editeaza review</button>
 
 </form>
 

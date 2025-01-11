@@ -30,11 +30,12 @@ namespace SneakerApp.Controllers
         [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Edit(int id)
         {
-            Review comm = db.Reviews.Find(id);
+            Review rev = db.Reviews.Find(id);
 
-            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            if (rev.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
             {
-                return View(comm);
+                ViewBag.miau = rev.UserId == _userManager.GetUserId(User);
+                return View(rev);
             }
             else
             {
@@ -50,18 +51,21 @@ namespace SneakerApp.Controllers
         [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Edit(int id, Review requestReview)
         {
-            Review comm = db.Reviews.Find(id);
+            Review rev = db.Reviews.Find(id);
 
-            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+
+            if (rev.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
             {
                 if (ModelState.IsValid)
                 {
 
-                    comm.Content = requestReview.Content;
+                    rev.Content = requestReview.Content;
+                    if(requestReview.Score != null)
+                        rev.Score = requestReview.Score;
 
                     db.SaveChanges();
 
-                    return Redirect("/Products/Show/" + comm.ProductId);
+                    return Redirect("/Products/Show/" + rev.ProductId);
                 }
                 else
                 {
@@ -85,13 +89,13 @@ namespace SneakerApp.Controllers
         [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Delete(int id)
         {
-            Review comm = db.Reviews.Find(id);
+            Review rev = db.Reviews.Find(id);
 
-            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            if (rev.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
             {
-                db.Reviews.Remove(comm);
+                db.Reviews.Remove(rev);
                 db.SaveChanges();
-                return Redirect("/Products/Show/" + comm.ProductId);
+                return Redirect("/Products/Show/" + rev.ProductId);
             }
             else
             {

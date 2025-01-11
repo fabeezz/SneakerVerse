@@ -1,29 +1,30 @@
 ﻿<br />
 <h2 class="text-center">Afisare produse</h2>
-
 <br />
 
 @if (ViewBag.Message != null)
 {
-	<div class="alert-success p-3 rounded-3 text-center mb-5 @ViewBag.Alert">@ViewBag.Message</div>
-        
+    <div class="alert-success p-3 rounded-3 text-center mb-5 @ViewBag.Alert">@ViewBag.Message</div>
 }
 
 <br />
 
-
 @foreach (var product in ViewBag.Products)
 {
     <div class="card">
-
         <partial name="ProductInfo" model="product"></partial>
+
+        <!-- Display the average score -->
+        <p>
+            <strong>Rating:</strong>
+            @((ViewBag.Averages.ContainsKey(product.Id) && ViewBag.Averages[product.Id] != null)
+                ? ViewBag.Averages[product.Id].ToString("0.##")
+                : "N/A")
+        </p>
 
         <a class="btn btn-success" asp-controller="Products"
            asp-action="Show" asp-route-id="@product.Id">Afisare produs</a>
-
     </div>
-
     <br />
     <br />
 }
-
