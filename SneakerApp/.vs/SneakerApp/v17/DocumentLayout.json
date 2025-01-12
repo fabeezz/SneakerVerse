@@ -45,8 +45,7 @@
               "RelativeToolTip": "Views\\Products\\Verify.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T14:00:30.417Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T14:00:30.417Z"
             },
             {
               "$type": "Document",
@@ -56,7 +55,7 @@
               "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
               "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Products\\Index.cshtml",
               "RelativeToolTip": "Views\\Products\\Index.cshtml",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAwEkAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAwEkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-12T13:47:12.381Z",
               "EditorCaption": ""
@@ -71,18 +70,16 @@
               "RelativeToolTip": "Views\\Products\\New.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T13:47:04.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T13:47:04.491Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "dbo.Products [Data]",
+              "Title": "dbo.Products.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SneakerDb/True/SqlTable/dbo.Products.sql",
-              "ToolTip": "dbo.Products [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SneakerDb/True/SqlTable/dbo.Products.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-01-12T13:37:56.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T13:37:56.023Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Models\\Product.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T13:37:02.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T13:37:02.318Z"
             },
             {
               "$type": "Document",
@@ -107,8 +103,7 @@
               "RelativeToolTip": "Controllers\\ProductsController.cs",
               "ViewState": "AgIAAF4AAAAAAAAAAAAAAHQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T13:33:51.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T13:33:51.656Z"
             }
           ]
         }
