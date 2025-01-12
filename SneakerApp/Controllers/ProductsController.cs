@@ -1,4 +1,4 @@
-﻿ using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -40,44 +40,99 @@ namespace SneakerApp.Controllers
 
         // INDEX (produse + categorie)
         [HttpGet]
-        [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Index()
         {
-            var products = db.Products.Include("Category").Include("User").ToList();
-
-            // Dictionary to store product Id and average score
+            var products = db.Products.Include("Category").Include("User").OrderBy(p => p.Name).ToList();
             var productAverages = new Dictionary<int, double?>();
 
+            // Calculate average rating for each product
             foreach (var prod in products)
             {
-                // Force client-side evaluation using ToList
                 var avgScore = db.Reviews
                                  .Where(r => r.ProductId == prod.Id)
                                  .Select(r => r.Score)
-                                 .ToList() // Executes the query
+                                 .ToList()
                                  .DefaultIfEmpty(null)
                                  .Average();
 
-                productAverages[prod.Id] = avgScore; // Store the average score
+                productAverages[prod.Id] = avgScore;
             }
 
             ViewBag.Products = products;
-            ViewBag.Averages = productAverages; // Pass averages to the view
+            ViewBag.Averages = productAverages;
 
-            if (TempData.ContainsKey("message"))
+            var search = "";
+            var sortBy = HttpContext.Request.Query["sortBy"].ToString();
+
+            // Search Logic
+            if (!string.IsNullOrEmpty(HttpContext.Request.Query["search"]))
             {
-                ViewBag.Message = TempData["message"];
-                ViewBag.Alert = TempData["messageType"];
+                search = HttpContext.Request.Query["search"].ToString().Trim();
+                List<int> productIds = db.Products.Where(pr => pr.Name.Contains(search) || pr.Category.CategoryName.Contains(search))
+                                                  .Select(p => p.Id).ToList();
+
+                products = db.Products.Where(p => productIds.Contains(p.Id))
+                                      .Include("Category")
+                                      .OrderBy(p => p.Name)
+                                      .ToList();
             }
+
+            // Sorting Logic (one parameter for both price and rating)
+            if (sortBy == "price_asc")
+            {
+                products = products.OrderBy(p => p.Price).ToList();
+            }
+            else if (sortBy == "price_desc")
+            {
+                products = products.OrderByDescending(p => p.Price).ToList();
+            }
+            else if (sortBy == "rating_asc")
+            {
+                products = products.OrderBy(p => productAverages.GetValueOrDefault(p.Id, 0)).ToList();
+            }
+            else if (sortBy == "rating_desc")
+            {
+                products = products.OrderByDescending(p => productAverages.GetValueOrDefault(p.Id, 0)).ToList();
+            }
+
+            ViewBag.SearchString = search;
+            ViewBag.SortBy = sortBy;
+
+            // Pagination Logic
+            int _perPage = 3;
+            int totalItems = products.Count();
+            var currentPage = Convert.ToInt32(HttpContext.Request.Query["page"]);
+            var offset = (currentPage - 1) * _perPage;
+
+            var paginatedProducts = products.Skip(offset).Take(_perPage);
+            ViewBag.lastPage = Math.Ceiling(totalItems / (float)_perPage);
+            ViewBag.Products = paginatedProducts;
+
+            // Build Pagination Base URL
+            ViewBag.PaginationBaseUrl = "/Products/Index/?page";
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                ViewBag.PaginationBaseUrl += "&search=" + search;
+            }
+
+            // Append sorting params to pagination URLs
+            if (!string.IsNullOrEmpty(sortBy))
+            {
+                ViewBag.PaginationBaseUrl += "&sortPrice=" + sortBy;
+            }
+            
 
             return View();
         }
 
 
 
+
+
         // SHOW (afisare produs pe baza id-ului)
         [HttpGet]
-        [Authorize(Roles = "User,Editor,Admin")]
+        //[Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Show(int id)
         {
             Product product = db.Products.Include("Category")
@@ -134,9 +189,7 @@ namespace SneakerApp.Controllers
         public IActionResult New()
         {
             Product product = new Product();
-
             product.Categ = GetAllCategories();
-
             return View(product);
         }
 
@@ -144,17 +197,26 @@ namespace SneakerApp.Controllers
         [Authorize(Roles = "Editor,Admin")]
         public IActionResult New(Product product)
         {
-
-
             // preluam id ul userului care posteza produsul
             product.UserId = _userManager.GetUserId(User);
+            product.Verified = false;
 
             if (ModelState.IsValid)
             {
+                if (User.IsInRole("Admin"))
+                {
+                    product.Verified = true;
+                }
+
                 db.Products.Add(product);
                 db.SaveChanges();
-                TempData["message"] = "Produsul a fost adaugat";
+
+                if (User.IsInRole("Editor"))
+                    TempData["message"] = "Produsul asteapta verificarea administratorului.";
+                else
+                    TempData["message"] = "Produsul a fost adaugat";
                 TempData["messageType"] = "alert-success";
+
                 return RedirectToAction("Index");
             }
             else
@@ -199,6 +261,13 @@ namespace SneakerApp.Controllers
         {
             Product product = db.Products.Find(id);
 
+            if (User.IsInRole("Admin"))
+                requestProduct.Verified = true;
+            else
+                requestProduct.Verified = false;
+
+
+
             if (ModelState.IsValid)
             {
                 if ((_userManager.GetUserId(User) == product.UserId) || User.IsInRole("Admin"))
@@ -207,9 +276,14 @@ namespace SneakerApp.Controllers
                     product.Description = requestProduct.Description;
                     product.Price = requestProduct.Price;
                     product.Stock = requestProduct.Stock;
-                    //product.Rating = requestProduct.Rating;
                     product.CategoryId = requestProduct.CategoryId;
-                    TempData["message"] = "Produsul a fost modificat";
+                    product.Verified = requestProduct.Verified;
+
+
+                    if (User.IsInRole("Editor"))
+                        TempData["message"] = "Produsul a fost modificat! Se asteapta verificarea.";
+                    else
+                        TempData["message"] = "Produsul a fost modificat";
                     TempData["messageType"] = "alert-success";
                     db.SaveChanges();
                     return RedirectToAction("Index");
@@ -221,8 +295,6 @@ namespace SneakerApp.Controllers
                     TempData["messageType"] = "alert-danger";
                     return RedirectToAction("Index");
                 }
-
-
             }
             else
             {
@@ -269,6 +341,43 @@ namespace SneakerApp.Controllers
             ViewBag.CurrentUser = _userManager.GetUserId(User);
             ViewBag.IsAdmin = User.IsInRole("Admin");
         }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public IActionResult Verify()
+        {
+            // Retrieve only unverified products
+            var products = db.Products.Include(p => p.Category)
+                               .ToList()
+                               .Where(p => !p.Verified)
+                               .ToList();
+
+            // Pass the products to the view
+            return View(products);
+        }
+
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public IActionResult Verify(int id)
+        {
+            var product = db.Products.Find(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            product.Verified = true;
+            db.SaveChanges();
+
+            TempData["message"] = "Produsul a fost verificat";
+            TempData["messageType"] = "alert-success";
+
+            return RedirectToAction("Index");
+        }
+
+
+
 
         [NonAction]
         public IEnumerable<SelectListItem> GetAllCategories()

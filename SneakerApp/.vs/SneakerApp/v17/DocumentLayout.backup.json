@@ -3,44 +3,27 @@
   "WorkspaceRootPath": "D:\\FMI\\SneakerVerse\\SneakerApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\views\\shared\\productinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:views\\shared\\productinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\views\\reviews\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:views\\reviews\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\views\\products\\verify.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:views\\products\\verify.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\views\\products\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:views\\products\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\views\\products\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:views\\products\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|d:\\fmi\\sneakerverse\\sneakerapp\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E95BA5-8968-43A6-8E88-08BCA4CFCD51}|SneakerApp.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SneakerDb/True/SqlTable/dbo.Products.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,135 +33,81 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Products\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
-              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Products\\Index.cshtml",
-              "RelativeToolTip": "Views\\Products\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-11T18:37:58.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ProductInfo.cshtml",
-              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Shared\\ProductInfo.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\ProductInfo.cshtml",
-              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Shared\\ProductInfo.cshtml",
-              "RelativeToolTip": "Views\\Shared\\ProductInfo.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Title": "Verify.cshtml",
+              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Products\\Verify.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Verify.cshtml",
+              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Products\\Verify.cshtml",
+              "RelativeToolTip": "Views\\Products\\Verify.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-11T18:32:19.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Reviews\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reviews\\Edit.cshtml",
-              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Reviews\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Reviews\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-11T17:35:54.891Z",
+              "WhenOpened": "2025-01-12T14:00:30.417Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T16:52:14.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ReviewsController.cs",
-              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Controllers\\ReviewsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReviewsController.cs",
-              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Controllers\\ReviewsController.cs",
-              "RelativeToolTip": "Controllers\\ReviewsController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwDsAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T16:48:22.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Show.cshtml",
-              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Products\\Show.cshtml",
-              "RelativeDocumentMoniker": "Views\\Products\\Show.cshtml",
-              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Products\\Show.cshtml",
-              "RelativeToolTip": "Views\\Products\\Show.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
+              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Products\\Index.cshtml*",
+              "RelativeToolTip": "Views\\Products\\Index.cshtml*",
+              "ViewState": "AgIAADkAAAAAAAAAAAAqwD8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-11T17:07:14.7Z",
+              "WhenOpened": "2025-01-12T13:47:12.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "New.cshtml",
+              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Products\\New.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\New.cshtml",
+              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Views\\Products\\New.cshtml",
+              "RelativeToolTip": "Views\\Products\\New.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-12T13:47:04.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "dbo.Products [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SneakerDb/True/SqlTable/dbo.Products.sql",
+              "ToolTip": "dbo.Products [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-01-12T13:37:56.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Models\\Product.cs",
               "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Models\\Product.cs",
               "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowCAAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T16:32:17.382Z",
+              "WhenOpened": "2025-01-12T13:37:02.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Review.cs",
-              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Models\\Review.cs",
-              "RelativeDocumentMoniker": "Models\\Review.cs",
-              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Models\\Review.cs",
-              "RelativeToolTip": "Models\\Review.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAAHQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T16:22:55.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T16:22:20.356Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Rating.cs",
-              "DocumentMoniker": "D:\\FMI\\SneakerVerse\\SneakerApp\\Models\\Rating.cs",
-              "RelativeDocumentMoniker": "Models\\Rating.cs",
-              "ToolTip": "D:\\FMI\\SneakerVerse\\SneakerApp\\Models\\Rating.cs",
-              "RelativeToolTip": "Models\\Rating.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T16:21:48.403Z",
+              "WhenOpened": "2025-01-12T13:33:51.656Z",
               "EditorCaption": ""
             }
           ]

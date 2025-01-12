@@ -1,30 +1,115 @@
 ﻿<br />
+<form method="GET">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Cauta dupa nume sau categorie" name="search" value="@ViewBag.SearchString">
+        <button class="btn btn-outline-success" type="submit">
+            Search
+        </button>
+    </div>
+</form>
+<br />
+
 <h2 class="text-center">Afisare produse</h2>
 <br />
 
-@if (ViewBag.Message != null)
+<div class="sort-buttons">
+    <!-- Sorting by price (ascending) -->
+    <a href="@Url.Action("Index", "Products", new { sortBy = "price_asc", search = ViewBag.SearchString })" class="btn btn-outline-primary">
+        Price (Asc)
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-down-alt" viewBox="0 0 16 16">
+            <path d="M3.5 3.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L3.5 12.293zm4 .5a.5.5 0 0 1 0-1h1a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h5a.5.5 0 0 1 0 1zM7 12.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5" />
+        </svg>
+    </a>
+
+    <!-- Sorting by price (descending) -->
+    <a href="@Url.Action("Index", "Products", new { sortBy = "price_desc", search = ViewBag.SearchString })" class="btn btn-outline-primary">
+        Price (Desc)
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-down" viewBox="0 0 16 16">
+            <path d="M3.5 2.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L3.5 11.293zm3.5 1a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z" />
+        </svg>
+    </a>
+
+    <!-- Sorting by rating (ascending) -->
+    <a href="@Url.Action("Index", "Products", new { sortBy = "rating_asc", search = ViewBag.SearchString })" class="btn btn-outline-primary">
+        Rating (Asc)
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-down-alt" viewBox="0 0 16 16">
+            <path d="M3.5 3.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L3.5 12.293zm4 .5a.5.5 0 0 1 0-1h1a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h5a.5.5 0 0 1 0 1zM7 12.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5" />
+        </svg>
+    </a>
+
+    <!-- Sorting by rating (descending) -->
+    <a href="@Url.Action("Index", "Products", new { sortBy = "rating_desc", search = ViewBag.SearchString })" class="btn btn-outline-primary">
+        Rating (Desc)
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-down" viewBox="0 0 16 16">
+            <path d="M3.5 2.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L3.5 11.293zm3.5 1a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z" />
+        </svg>
+    </a>
+</div>
+
+<br />
+
+@if (User.IsInRole("Admin"))
 {
-    <div class="alert-success p-3 rounded-3 text-center mb-5 @ViewBag.Alert">@ViewBag.Message</div>
+    var unverifiedCount = ((IEnumerable<SneakerApp.Models.Product>)ViewBag.Products).Count(p => !p.Verified);
+
+    if (unverifiedCount > 0)
+    {
+        <div class="alert alert-warning">
+            Există @unverifiedCount produs(e) care așteaptă verificare.
+            <a href="@Url.Action("Verify", "Products")">Vezi produse</a>
+        </div>
+    }
 }
 
 <br />
 
 @foreach (var product in ViewBag.Products)
 {
-    <div class="card">
-        <partial name="ProductInfo" model="product"></partial>
+    if (product.Verified == true)
+    {
+        <div class="card">
+            <partial name="ProductInfo" model="product" />
 
-        <!-- Display the average score -->
-        <p>
-            <strong>Rating:</strong>
-            @((ViewBag.Averages.ContainsKey(product.Id) && ViewBag.Averages[product.Id] != null)
-                ? ViewBag.Averages[product.Id].ToString("0.##")
-                : "N/A")
-        </p>
+            <!-- Display the average score -->
+            <p>
+                <strong> Rating:</strong>
+                @((ViewBag.Averages.ContainsKey(product.Id) && ViewBag.Averages[product.Id] != null)
+                    ? ViewBag.Averages[product.Id].ToString("0.##")
+                    : "N/A")
+            </p>
 
-        <a class="btn btn-success" asp-controller="Products"
-           asp-action="Show" asp-route-id="@product.Id">Afisare produs</a>
-    </div>
-    <br />
-    <br />
+            <a class="btn btn-success" asp-controller="Products" asp-action="Show" asp-route-id="@product.Id">Afisare produs</a>
+        </div>
+        <br />
+        <br />
+    }
 }
+
+@* Paginate the products *@
+<div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <!-- Previous Page Link -->
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Index", "Products", new { page = 1, sortBy = ViewBag.SortBy, search = ViewBag.SearchString })" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+
+            <!-- Page Numbers -->
+            @for (int i = 1; i <= ViewBag.lastPage; i++)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", "Products", new { page = i, sortBy = ViewBag.SortBy, search = ViewBag.SearchString })">@i</a>
+                </li>
+            }
+
+            <!-- Next Page Link -->
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Index", "Products", new { page = ViewBag.lastPage, sortBy = ViewBag.SortBy, search = ViewBag.SearchString })" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SneakerApp.Models.Product>
+
+<h2>Produse care așteaptă verificare</h2>
+
+@if (TempData["message"] != null)
+{
+    <div class="alert @TempData["messageType"]">
+        @TempData["message"]
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nume</th>
+            <th>Pret</th>
+            <th>Categorie</th>
+            <th>Actiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>@product.Category.CategoryName</td>
+                <td>
+                    <form method="post" asp-action="Verify" asp-controller="Products">
+                        <input type="hidden" name="id" value="@product.Id" />
+                        <button class="btn btn-success" type="submit">Verifică</button>
+                    </form>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
