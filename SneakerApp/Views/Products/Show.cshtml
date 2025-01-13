@@ -29,6 +29,18 @@
 <br />
 <br />
 
+@if (!(User.IsInRole("Admin") || User.IsInRole("Editor"))){
+<form method="post" asp-controller="Carts" asp-action="AddToCart">
+    <input type="hidden" name="productId" value="@Model.Id" />
+    <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" min="1" max="@Model.Stock" value="1" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add to Cart</button>
+</form>
+}
+
+
 @*Afisare reviewuri impreuna cu butoanele de editare si stergere *@
 
 @foreach (var rev in Model.Reviews) 

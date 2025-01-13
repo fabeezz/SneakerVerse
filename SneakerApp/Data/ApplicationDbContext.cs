@@ -18,6 +18,7 @@ namespace SneakerApp.Data
         public DbSet<ProductWishlist> ProductWishlists { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -52,6 +53,16 @@ namespace SneakerApp.Data
                 .HasOne<Product>(r => r.Product)
                 .WithMany(p => p.Reviews)
                 .HasForeignKey(r => r.ProductId);
+
+            modelBuilder.Entity<CartItem>()
+                .HasOne(c => c.Product)
+                .WithMany() // Assuming a product can be in many carts, but we don't need a navigation property back to CartItem
+                .HasForeignKey(c => c.ProductId);
+
+            modelBuilder.Entity<CartItem>()
+                .HasOne(c => c.User)
+                .WithMany() // Assuming a user can have many cart items, but we don't need a navigation property back to CartItem
+                .HasForeignKey(c => c.UserId);
 
             //// Review-ApplicationUser relationship
             //modelBuilder.Entity<Review>()
