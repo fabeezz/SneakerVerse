@@ -28,10 +28,8 @@ namespace SneakerApp.Controllers
                 .ThenInclude(p => p.Category)
                 .ToList();
 
-            // Calculate total cart value
             double totalCartValue = cartItems.Sum(ci => ci.Quantity * ci.Product.Price);
 
-            // Pass the cart items and total value to the view
             ViewBag.TotalCartValue = totalCartValue;
 
             return View(cartItems);
@@ -53,13 +51,11 @@ namespace SneakerApp.Controllers
                 return BadRequest("Insufficient stock.");
             }
 
-            // Check if the item already exists in the cart
             var cartItem = db.CartItems
                 .FirstOrDefault(ci => ci.ProductId == productId && ci.UserId == userId);
 
             if (cartItem != null)
             {
-                // Update quantity if already in cart
                 cartItem.Quantity += quantity;
             }
             else
@@ -74,7 +70,6 @@ namespace SneakerApp.Controllers
                 db.CartItems.Add(cartItem);
             }
 
-            // No stock update here
             db.SaveChanges();
 
             return RedirectToAction("Index");
@@ -119,12 +114,10 @@ namespace SneakerApp.Controllers
                 var product = db.Products.Find(cartItem.ProductId);
                 if (product != null)
                 {
-                    product.Stock -= cartItem.Quantity; // Decrement stock here
+                    product.Stock -= cartItem.Quantity;
                 }
             }
 
-            // Logic to place the order (e.g., save to database)
-            // Clear the cart after placing the order
             db.CartItems.RemoveRange(cartItems);
             db.SaveChanges();
 

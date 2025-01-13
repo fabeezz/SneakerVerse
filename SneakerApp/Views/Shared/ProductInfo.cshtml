@@ -2,10 +2,8 @@
 
 <div class="card-body">
 
-    <h3 class="card-title alert-success py-3 px-3 rounded-2">@Model.Name</h3>
-
-    @if (@Model.Image.Contains(".mp4") ||
-    @Model.Image.Contains(".mov"))
+    <h3 class="card-title alert-success py-2 px-3 rounded-2">@Model.Name</h3>
+    @if (@Model.Image.Contains(".mp4") || @Model.Image.Contains(".mov"))
     {
         <video width="550" height="300" controls>
             <source src="@Model.Image" type="video/mp4">
@@ -14,23 +12,22 @@
     }
     else
     {
-        <img src="@Model.Image" alt="Article Image" style="width: 100%; height: auto; max-height: 450px; object-fit: cover;" /> <!-- Updated styles -->
+        <img src="@Model.Image" alt="Article Image" style="width: 100%; height: auto; max-height: 300px; object-fit: cover;" />
     }
-    <div class="card-text"> @Model.Description</div>
 
-    <div class="card-text">Price: @Model.Price</div>
+    <strong>
+        <div class="card-text mt-2">@Model.Description</div>
 
-    <div class="card-text">Stock: @Model.Stock</div>
+        <div class="d-flex justify-content-between flex-row">
+            <div class="card-text">Stock: @Model.Stock</div>
+            <div class="card-text">$@Model.Price</div>
+        </div>
+    </strong>
 
-    
-
-    <div class="d-flex justify-content-between flex-row mt-5">
+    <div class="d-flex justify-content-between flex-row mt-3">
 
         <div><i class="bi bi-globe"></i> @Model.Category.CategoryName</div>
-
-@*         <div><i class="bi bi-person"></i>@Model.User.UserName</div> *@
-
+        <div><i class="bi bi-person"></i> @Model.User.UserName</div>
     </div>
 
 </div>
-

@@ -5,9 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using SneakerApp.Data;
-using SneakerApp.Data.Migrations;
 using SneakerApp.Models;
-using System.Net.NetworkInformation;
 
 namespace SneakerApp.Controllers
 {
@@ -50,7 +48,6 @@ namespace SneakerApp.Controllers
             var products = db.Products.Include("Category").Include("User").OrderBy(p => p.Name).ToList();
             var productAverages = new Dictionary<int, double?>();
 
-            // Calculate average rating for each product
             foreach (var prod in products)
             {
                 var avgScore = db.Reviews
@@ -69,7 +66,6 @@ namespace SneakerApp.Controllers
             var search = "";
             var sortBy = HttpContext.Request.Query["sortBy"].ToString();
 
-            // Search Logic
             if (!string.IsNullOrEmpty(HttpContext.Request.Query["search"]))
             {
                 search = HttpContext.Request.Query["search"].ToString().Trim();
@@ -82,7 +78,6 @@ namespace SneakerApp.Controllers
                                       .ToList();
             }
 
-            // Sorting Logic (one parameter for both price and rating)
             if (sortBy == "price_asc")
             {
                 products = products.OrderBy(p => p.Price).ToList();
@@ -103,7 +98,6 @@ namespace SneakerApp.Controllers
             ViewBag.SearchString = search;
             ViewBag.SortBy = sortBy;
 
-            // Pagination Logic
             int _perPage = 6;
             int totalItems = products.Count();
             var currentPage = Convert.ToInt32(HttpContext.Request.Query["page"]);
@@ -113,7 +107,6 @@ namespace SneakerApp.Controllers
             ViewBag.lastPage = Math.Ceiling(totalItems / (float)_perPage);
             ViewBag.Products = paginatedProducts;
 
-            // Build Pagination Base URL
             ViewBag.PaginationBaseUrl = "/Products/Index/?page";
 
             if (!string.IsNullOrEmpty(search))
@@ -126,14 +119,10 @@ namespace SneakerApp.Controllers
             {
                 ViewBag.PaginationBaseUrl += "&sortPrice=" + sortBy;
             }
-            
+
 
             return View();
         }
-
-
-
-
 
         // SHOW (afisare produs pe baza id-ului)
         [HttpGet]
@@ -209,12 +198,12 @@ namespace SneakerApp.Controllers
             if (Image != null && Image.Length > 0)
             {
                 // Verificăm extensia
-                var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif",".mp4", ".mov" };
+                var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".mp4", ".mov" };
                 var fileExtension = Path.GetExtension(Image.FileName).ToLower();
                 if (!allowedExtensions.Contains(fileExtension))
                 {
                     ModelState.AddModelError("ProductImage", "Fișierul trebuie să fie o imagine(jpg, jpeg, png, gif) sau un video(mp4, mov).");
-                return View(product);
+                    return View(product);
                 }
 
                 // Cale stocare
@@ -248,9 +237,9 @@ namespace SneakerApp.Controllers
 
                 return RedirectToAction("Index", "Products");
             }
-                product.Categ = GetAllCategories();
-                return View(product);
-            
+            product.Categ = GetAllCategories();
+            return View(product);
+
         }
 
         // EDIT
@@ -286,7 +275,7 @@ namespace SneakerApp.Controllers
         [Authorize(Roles = "Editor,Admin")]
         public async Task<IActionResult> Edit(int id, Product requestProduct, IFormFile Image)
         {
-            // Retrieve the product to edit
+
             Product product = db.Products.Find(id);
 
             // If the product is not found, return NotFound
@@ -295,10 +284,8 @@ namespace SneakerApp.Controllers
                 return NotFound();
             }
 
-            // Check if the user is allowed to edit the product
             if ((_userManager.GetUserId(User) == product.UserId) || User.IsInRole("Admin"))
             {
-                // Assign the values from the requestProduct to the product entity
                 product.Name = requestProduct.Name;
                 product.Description = requestProduct.Description;
                 product.Price = requestProduct.Price;
@@ -317,11 +304,9 @@ namespace SneakerApp.Controllers
                         return View(requestProduct);
                     }
 
-
                     var storagePath = Path.Combine(_env.WebRootPath, "images", Image.FileName);
                     var databaseFileName = "/images/" + Image.FileName;
 
-                    // Save the new image
                     using (var fileStream = new FileStream(storagePath, FileMode.Create))
                     {
                         await Image.CopyToAsync(fileStream);
@@ -342,7 +327,6 @@ namespace SneakerApp.Controllers
             }
             else
             {
-                // If the user does not have permission to edit this product
                 requestProduct.Categ = GetAllCategories();
                 TempData["message"] = "Nu aveti dreptul sa modificati un produs al altui brand!";
                 TempData["messageType"] = "alert-danger";
@@ -394,13 +378,12 @@ namespace SneakerApp.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult Verify()
         {
-            // Retrieve only unverified products
+            //unverified products
             var products = db.Products.Include(p => p.Category)
                                .ToList()
                                .Where(p => !p.Verified)
                                .ToList();
 
-            // Pass the products to the view
             return View(products);
         }
 

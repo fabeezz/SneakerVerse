@@ -1,5 +1,12 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\convesres.jpg
+wwwroot\images\favicon.jpg
+wwwroot\images\jordan1.jpg
+wwwroot\images\nike.jpg
+wwwroot\images\rick.jpg
+wwwroot\images\rick.webp
+wwwroot\images\Screenshot 2023-09-21 205408.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

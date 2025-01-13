@@ -1,21 +1,21 @@
 ﻿@model IEnumerable<SneakerApp.Models.CartItem>
 
-<h2>Your Cart</h2>
+<h2>Coș de cumpărături</h2>
 
 @if (!Model.Any())
 {
-    <p>Your cart is empty.</p>
+    <p>Coșul este gol!</p>
 }
 else
 {
     <table class="table">
         <thead>
             <tr>
-                <th>Product</th>
-                <th>Category</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th>Actions</th>
+                <th>Produs</th>
+                <th>Categorie</th>
+                <th>Cantitate</th>
+                <th>Preț</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -25,20 +25,22 @@ else
                     <td>@item.Product.Name</td>
                     <td>@item.Product.Category?.CategoryName</td>
                     <td>@item.Quantity</td>
-                    <td>@(item.Product.Price * item.Quantity)</td>
+                    <td>$@(item.Product.Price * item.Quantity)</td>
                     <td>
                         <form method="post" asp-action="RemoveFromCart" asp-controller="Carts">
                             <input type="hidden" name="cartItemId" value="@item.Id" />
-                            <button type="submit" class="btn btn-danger">Remove</button>
+                            <button type="submit" class="btn btn-danger"><strong>X</strong></button>
                         </form>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
-    <form asp-action="PlaceOrder" method="post">
-        <button type="submit" class="btn btn-success">Place Order</button>
-    </form>
 
-    <h3>Total Cart Value: @ViewBag.TotalCartValue.ToString("C")</h3>
+    <div class="d-flex flex-column align-items-center justify-content-center mt-4">
+        <form asp-action="PlaceOrder" method="post" class="mb-3">
+            <button type="submit" class="btn btn-success">Plasează comanda</button>
+        </form>
+        <h3>Preț total: @ViewBag.TotalCartValue.ToString("C")</h3>
+    </div>
 }

@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/SneakerApp/css/site.c2tiyv64ts.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"c2tiyv64ts"},{"Name":"integrity","Value":"sha256-pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0="},{"Name":"label","Value":"_content/SneakerApp/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"362"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 12 Jan 2025 19:44:02 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SneakerApp/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"362"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 12 Jan 2025 19:44:02 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-loNBME6/mWEPrILN2ihAk1AJF/PEJQsb5GeX4CUn24s="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2279"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022loNBME6/mWEPrILN2ihAk1AJF/PEJQsb5GeX4CUn24s=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 19:50:30 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/css/site.yhpuzxg6te.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"yhpuzxg6te"},{"Name":"integrity","Value":"sha256-loNBME6/mWEPrILN2ihAk1AJF/PEJQsb5GeX4CUn24s="},{"Name":"label","Value":"_content/SneakerApp/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2279"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022loNBME6/mWEPrILN2ihAk1AJF/PEJQsb5GeX4CUn24s=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 19:50:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SneakerApp/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
@@ -23,6 +23,90 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Sun, 12 Jan 2025 19:44:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/convesres.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\convesres.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Uiw\u002BkbZSFs2mNTQU8U2eazzYQTU07zGozIwnmBDIFxc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"49806"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Uiw\u002BkbZSFs2mNTQU8U2eazzYQTU07zGozIwnmBDIFxc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:49:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/convesres.yvj4ua5wk3.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\convesres.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"yvj4ua5wk3"},{"Name":"integrity","Value":"sha256-Uiw\u002BkbZSFs2mNTQU8U2eazzYQTU07zGozIwnmBDIFxc="},{"Name":"label","Value":"_content/SneakerApp/images/convesres.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"49806"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Uiw\u002BkbZSFs2mNTQU8U2eazzYQTU07zGozIwnmBDIFxc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:49:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/favicon.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\favicon.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-8QWd5OSI8vvq6s7ub3\u002BqDI83l4yX5aZQppl0gHRgt9Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2098"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00228QWd5OSI8vvq6s7ub3\u002BqDI83l4yX5aZQppl0gHRgt9Y=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/favicon.jva4mhz8y1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\favicon.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jva4mhz8y1"},{"Name":"integrity","Value":"sha256-8QWd5OSI8vvq6s7ub3\u002BqDI83l4yX5aZQppl0gHRgt9Y="},{"Name":"label","Value":"_content/SneakerApp/images/favicon.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2098"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00228QWd5OSI8vvq6s7ub3\u002BqDI83l4yX5aZQppl0gHRgt9Y=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/jordan1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\jordan1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-SeR2Wq1//NYskErLSTrd75OyqdlJMtl4jE0H5kejO88="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"83329"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022SeR2Wq1//NYskErLSTrd75OyqdlJMtl4jE0H5kejO88=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/jordan1.tvlaz1jar7.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\jordan1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"tvlaz1jar7"},{"Name":"integrity","Value":"sha256-SeR2Wq1//NYskErLSTrd75OyqdlJMtl4jE0H5kejO88="},{"Name":"label","Value":"_content/SneakerApp/images/jordan1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"83329"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022SeR2Wq1//NYskErLSTrd75OyqdlJMtl4jE0H5kejO88=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/nike.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\nike.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5ESQ4WpSxGsl9shPbxOB4BHVeejwx0UH8dQu5b6QJSU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"171192"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00225ESQ4WpSxGsl9shPbxOB4BHVeejwx0UH8dQu5b6QJSU=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:46:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/nike.wh2huspjic.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\nike.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wh2huspjic"},{"Name":"integrity","Value":"sha256-5ESQ4WpSxGsl9shPbxOB4BHVeejwx0UH8dQu5b6QJSU="},{"Name":"label","Value":"_content/SneakerApp/images/nike.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"171192"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00225ESQ4WpSxGsl9shPbxOB4BHVeejwx0UH8dQu5b6QJSU=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:46:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/rick.bfci4moj7e.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\rick.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"bfci4moj7e"},{"Name":"integrity","Value":"sha256-mRQ70d5i62XhNreYsQ\u002Bg/3qoegJud917pz2rLbdkgBM="},{"Name":"label","Value":"_content/SneakerApp/images/rick.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"26623"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022mRQ70d5i62XhNreYsQ\u002Bg/3qoegJud917pz2rLbdkgBM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/rick.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\rick.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-mRQ70d5i62XhNreYsQ\u002Bg/3qoegJud917pz2rLbdkgBM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"26623"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022mRQ70d5i62XhNreYsQ\u002Bg/3qoegJud917pz2rLbdkgBM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/rick.n36fbua882.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\rick.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"n36fbua882"},{"Name":"integrity","Value":"sha256-XXATPQK/BBjJngwWaYYRZpurBMl5oZrTmxFmL6lcIuE="},{"Name":"label","Value":"_content/SneakerApp/images/rick.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"20272"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022XXATPQK/BBjJngwWaYYRZpurBMl5oZrTmxFmL6lcIuE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/rick.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\rick.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XXATPQK/BBjJngwWaYYRZpurBMl5oZrTmxFmL6lcIuE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"20272"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022XXATPQK/BBjJngwWaYYRZpurBMl5oZrTmxFmL6lcIuE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/Screenshot 2023-09-21 205408.820t3y641s.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Screenshot 2023-09-21 205408.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"820t3y641s"},{"Name":"integrity","Value":"sha256-kLB/zB20G\u002BJWWAIBNqmZt1K6Yr9nDMeLP/OW886BL/8="},{"Name":"label","Value":"_content/SneakerApp/images/Screenshot 2023-09-21 205408.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"714720"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022kLB/zB20G\u002BJWWAIBNqmZt1K6Yr9nDMeLP/OW886BL/8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/images/Screenshot 2023-09-21 205408.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Screenshot 2023-09-21 205408.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-kLB/zB20G\u002BJWWAIBNqmZt1K6Yr9nDMeLP/OW886BL/8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"714720"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022kLB/zB20G\u002BJWWAIBNqmZt1K6Yr9nDMeLP/OW886BL/8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SneakerApp/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
@@ -721,16 +805,16 @@
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1117"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\u0022"},{"Name":"Last-Modified","Value":"Sun, 12 Jan 2025 19:44:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SneakerApp/SneakerApp.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\SneakerApp.douv600rtq.bundle.scp.css'))</AssetFile>
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\SneakerApp.flpnmvpc3z.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-DTOGaxF79b9Wdn0i2TBgcpHYQoYpNgf2dFngsLNYoJY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1128"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022DTOGaxF79b9Wdn0i2TBgcpHYQoYpNgf2dFngsLNYoJY=\u0022"},{"Name":"Last-Modified","Value":"Sun, 12 Jan 2025 19:44:02 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-UyNRAXXul1gu6lKTzNxbxqF471UIT5kIReybxYMi\u002B/w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1516"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022UyNRAXXul1gu6lKTzNxbxqF471UIT5kIReybxYMi\u002B/w=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/SneakerApp/SneakerApp.douv600rtq.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\SneakerApp.douv600rtq.bundle.scp.css'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/SneakerApp/SneakerApp.flpnmvpc3z.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\SneakerApp.flpnmvpc3z.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"douv600rtq"},{"Name":"integrity","Value":"sha256-DTOGaxF79b9Wdn0i2TBgcpHYQoYpNgf2dFngsLNYoJY="},{"Name":"label","Value":"_content/SneakerApp/SneakerApp.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1128"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022DTOGaxF79b9Wdn0i2TBgcpHYQoYpNgf2dFngsLNYoJY=\u0022"},{"Name":"Last-Modified","Value":"Sun, 12 Jan 2025 19:44:02 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"flpnmvpc3z"},{"Name":"integrity","Value":"sha256-UyNRAXXul1gu6lKTzNxbxqF471UIT5kIReybxYMi\u002B/w="},{"Name":"label","Value":"_content/SneakerApp/SneakerApp.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1516"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022UyNRAXXul1gu6lKTzNxbxqF471UIT5kIReybxYMi\u002B/w=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 18:40:31 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>
