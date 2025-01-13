@@ -7,7 +7,7 @@
 
 <div class="card">
 
-        <partial name="ProductInfo" model="Model"></partial>
+    <partial name="ProductInfo" model="Model"></partial>
 
     @if(ViewBag.IsAdmin == true || (ViewBag.CurrentUser == Model.UserId && ViewBag.Buttons == true))
     {

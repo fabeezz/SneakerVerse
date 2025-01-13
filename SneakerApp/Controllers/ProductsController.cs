@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using SneakerApp.Data;
+using SneakerApp.Data.Migrations;
 using SneakerApp.Models;
+using System.Net.NetworkInformation;
 
 namespace SneakerApp.Controllers
 {
@@ -13,15 +15,18 @@ namespace SneakerApp.Controllers
     {
         // Pasul 10: Useri si roluri
         private readonly ApplicationDbContext db;
+        private readonly IWebHostEnvironment _env;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         public ProductsController(
         ApplicationDbContext context,
+        IWebHostEnvironment env,
         UserManager<ApplicationUser> userManager,
         RoleManager<IdentityRole> roleManager
         )
         {
             db = context;
+            _env = env;
             _userManager = userManager;
             _roleManager = roleManager;
         }
@@ -195,13 +200,37 @@ namespace SneakerApp.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Editor,Admin")]
-        public IActionResult New(Product product)
+        public async Task<IActionResult> New(Product product, IFormFile Image)
         {
             // preluam id ul userului care posteza produsul
             product.UserId = _userManager.GetUserId(User);
             product.Verified = false;
 
-            if (ModelState.IsValid)
+            if (Image != null && Image.Length > 0)
+            {
+                // Verificăm extensia
+                var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif",".mp4", ".mov" };
+                var fileExtension = Path.GetExtension(Image.FileName).ToLower();
+                if (!allowedExtensions.Contains(fileExtension))
+                {
+                    ModelState.AddModelError("ProductImage", "Fișierul trebuie să fie o imagine(jpg, jpeg, png, gif) sau un video(mp4, mov).");
+                return View(product);
+                }
+
+                // Cale stocare
+                var storagePath = Path.Combine(_env.WebRootPath, "images",
+                Image.FileName);
+                var databaseFileName = "/images/" + Image.FileName;
+                // Salvare fișier
+                using (var fileStream = new FileStream(storagePath, FileMode.Create))
+                {
+                    await Image.CopyToAsync(fileStream);
+                }
+                ModelState.Remove(nameof(product.Image));
+                product.Image = databaseFileName;
+            }
+
+            if (TryValidateModel(product))
             {
                 if (User.IsInRole("Admin"))
                 {
@@ -209,7 +238,7 @@ namespace SneakerApp.Controllers
                 }
 
                 db.Products.Add(product);
-                db.SaveChanges();
+                await db.SaveChangesAsync();
 
                 if (User.IsInRole("Editor"))
                     TempData["message"] = "Produsul asteapta verificarea administratorului.";
@@ -217,13 +246,11 @@ namespace SneakerApp.Controllers
                     TempData["message"] = "Produsul a fost adaugat";
                 TempData["messageType"] = "alert-success";
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Products");
             }
-            else
-            {
                 product.Categ = GetAllCategories();
                 return View(product);
-            }
+            
         }
 
         // EDIT
@@ -257,51 +284,72 @@ namespace SneakerApp.Controllers
         // se verifica rolul utilizatorilor care au dreptul sa editeze
         [HttpPost]
         [Authorize(Roles = "Editor,Admin")]
-        public IActionResult Edit(int id, Product requestProduct)
+        public async Task<IActionResult> Edit(int id, Product requestProduct, IFormFile Image)
         {
+            // Retrieve the product to edit
             Product product = db.Products.Find(id);
 
-            if (User.IsInRole("Admin"))
-                requestProduct.Verified = true;
-            else
-                requestProduct.Verified = false;
-
-
-
-            if (ModelState.IsValid)
+            // If the product is not found, return NotFound
+            if (product == null)
             {
-                if ((_userManager.GetUserId(User) == product.UserId) || User.IsInRole("Admin"))
+                return NotFound();
+            }
+
+            // Check if the user is allowed to edit the product
+            if ((_userManager.GetUserId(User) == product.UserId) || User.IsInRole("Admin"))
+            {
+                // Assign the values from the requestProduct to the product entity
+                product.Name = requestProduct.Name;
+                product.Description = requestProduct.Description;
+                product.Price = requestProduct.Price;
+                product.Stock = requestProduct.Stock;
+                product.CategoryId = requestProduct.CategoryId;
+                product.Verified = requestProduct.Verified;
+
+                if (Image != null && Image.Length > 0)
                 {
-                    product.Name = requestProduct.Name;
-                    product.Description = requestProduct.Description;
-                    product.Price = requestProduct.Price;
-                    product.Stock = requestProduct.Stock;
-                    product.CategoryId = requestProduct.CategoryId;
-                    product.Verified = requestProduct.Verified;
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".mp4", ".mov" };
+                    var fileExtension = Path.GetExtension(Image.FileName).ToLower();
+                    if (!allowedExtensions.Contains(fileExtension))
+                    {
+                        ModelState.AddModelError("ProductImage", "Fișierul trebuie să fie o imagine(jpg, jpeg, png, gif) sau un video(mp4, mov).");
+                        requestProduct.Categ = GetAllCategories();
+                        return View(requestProduct);
+                    }
 
 
-                    if (User.IsInRole("Editor"))
-                        TempData["message"] = "Produsul a fost modificat! Se asteapta verificarea.";
-                    else
-                        TempData["message"] = "Produsul a fost modificat";
-                    TempData["messageType"] = "alert-success";
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
+                    var storagePath = Path.Combine(_env.WebRootPath, "images", Image.FileName);
+                    var databaseFileName = "/images/" + Image.FileName;
+
+                    // Save the new image
+                    using (var fileStream = new FileStream(storagePath, FileMode.Create))
+                    {
+                        await Image.CopyToAsync(fileStream);
+                    }
+
+                    product.Image = databaseFileName;
                 }
+
+                db.SaveChanges();
+
+                if (User.IsInRole("Editor"))
+                    TempData["message"] = "Produsul a fost modificat! Se asteapta verificarea.";
                 else
-                {
-                    product.Categ = GetAllCategories();
-                    TempData["message"] = "Nu aveti dreptul sa modificati un produs al altui brand!";
-                    TempData["messageType"] = "alert-danger";
-                    return RedirectToAction("Index");
-                }
+                    TempData["message"] = "Produsul a fost modificat";
+
+                TempData["messageType"] = "alert-success";
+                return RedirectToAction("Index");
             }
             else
             {
+                // If the user does not have permission to edit this product
                 requestProduct.Categ = GetAllCategories();
-                return View(requestProduct);
+                TempData["message"] = "Nu aveti dreptul sa modificati un produs al altui brand!";
+                TempData["messageType"] = "alert-danger";
+                return RedirectToAction("Index");
             }
         }
+
 
         // DELETE
 

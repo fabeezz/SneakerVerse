@@ -21,7 +21,7 @@ namespace SneakerApp.Models
         [Required(ErrorMessage = "Stocul este obligatoriu!")]
         public int Stock { get; set; }
 
-
+        public string Image { get; set; }
 
         // CATEGORIES
 

@@ -13,8 +13,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\wwwroot\\images\\Screenshot 2023-09-21 205408.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-09-21 205408.png"
+    },
+    {
       "Id": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\wwwroot\\images\\favicon.jpg",
       "PackagePath": "staticwebassets\\images\\favicon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\wwwroot\\images\\jordan1.jpg",
+      "PackagePath": "staticwebassets\\images\\jordan1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\wwwroot\\images\\rick.jpg",
+      "PackagePath": "staticwebassets\\images\\rick.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\wwwroot\\images\\rick.webp",
+      "PackagePath": "staticwebassets\\images\\rick.webp"
     },
     {
       "Id": "C:\\Users\\tudor\\OneDrive\\Documente\\GitHub\\SneakerVerse\\SneakerApp\\wwwroot\\js\\site.js",
