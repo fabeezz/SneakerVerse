@@ -44,5 +44,21 @@ button.accept-policy[b-s34bj4f573] {
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px;
+  line-height: 80px;
 }
+
+/* Add this to ensure all icons have the same size */
+.nav-link svg[b-s34bj4f573] {
+    width: 40px; /* Set a consistent width */
+    height: 40px; /* Set a consistent height */
+}
+
+.nav-item[b-s34bj4f573] {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+}
+
+.nav-link[b-s34bj4f573] {
+    padding: 0.5rem; /* Adjust padding as needed */
+}
+

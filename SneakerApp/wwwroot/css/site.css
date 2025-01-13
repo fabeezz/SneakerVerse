@@ -1,22 +1,119 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+    }
+
+/* Title Background */
+.card-title {
+    background-color: #6a0dad; /* Purple shade */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+.btn-success {
+    background-color: #6a0dad; /* Purple shade */
+    border: none;
+}
+
+    .btn-success:hover {
+        background-color: #5c009c; /* Darker purple */
+    }
+
+/* Star Rating Colors */
+.star-rating i {
+    color: #ffd700; /* Gold for filled stars */
+}
+
+    .star-rating i.inactive {
+        color: #e4e5e9; /* Gray for empty stars */
+    }
+
+/* Animated Heading */
+.animated-heading {
+    font-size: 2rem;
+    color: #6a0dad; /* Purple */
+    font-weight: bold;
+    animation: fade-in-slide-down 2s ease-in-out infinite;
+}
+
+@keyframes fade-in-slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .star-rating i {
+        font-size: 18px; /* Smaller stars for mobile */
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+}
+
+/* Add this to ensure all icons have the same size */
+.nav-link svg {
+    width: 24px; /* Set a consistent width */
+    height: 24px; /* Set a consistent height */
+}
+
+.nav-item {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+}
+
+.nav-link {
+    padding: 0.5rem; /* Adjust padding as needed */
 }

@@ -43,60 +43,55 @@
 
 @*Afisare reviewuri impreuna cu butoanele de editare si stergere *@
 
-@foreach (var rev in Model.Reviews) 
-{ 
-    <div class="container"> 
-        <div class="row"> 
-            <div class="col-md-2"></div> 
+@foreach (var rev in Model.Reviews)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
 
-            <div class="col-md-8"> 
+            <div class="col-md-8">
 
-                <div> 
-
-                    <p>@rev.Score</p>
-                    <p>@rev.Content</p> 
+                <div>
+                    <!-- Star Rating for Reviews -->
+                    <div class="star-rating">
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            <i class="bi bi-star-fill"
+                               style="color: @(i <= rev.Score ? "#ffd700" : "#e4e5e9");">
+                            </i>
+                        }
+                    </div>
+                    <p>@rev.Content</p>
                     <small>@rev.Date</small>
                     <strong><i class="bi bi-person">@rev.User.UserName</i></strong>
+                </div>
+                <br>
 
-                </div> 
-                <br> 
-
-                @if(rev.UserId == ViewBag.CurrentUser || ViewBag.IsAdmin == true)
+                @if (rev.UserId == ViewBag.CurrentUser || ViewBag.IsAdmin == true)
                 {
                     <div class="d-flex">
-
                         <div>
-
                             <a class="btn btn-outline-primary" asp-controller="Reviews" asp-action="Edit" asp-route-id="@rev.ReviewId">
                                 <i class="bi bi-pencil-square"></i>  Editeaza
                             </a>
-
                         </div>
-
                         <div>
-
                             <form method="post" asp-controller="Reviews" asp-action="Delete" asp-route-id="@rev.ReviewId">
-
-                                <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i> Sterge</button>
-
+                                <button class="btn btn-outline-danger" type="submit">
+                                    <i class="bi bi-trash"></i> Sterge
+                                </button>
                             </form>
-
                         </div>
-
                     </div>
                 }
+                <br />
+            </div>
 
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+}
 
-                 <br /> 
-
-             </div> 
-
-             <div class="col-md-2"></div> 
-
-         </div> 
-
-     </div> 
- }
 
 
  @* Afisarea formularului in care se poate adauga un comentariu  *@

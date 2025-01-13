@@ -99,7 +99,7 @@ namespace SneakerApp.Controllers
             ViewBag.SortBy = sortBy;
 
             // Pagination Logic
-            int _perPage = 3;
+            int _perPage = 6;
             int totalItems = products.Count();
             var currentPage = Convert.ToInt32(HttpContext.Request.Query["page"]);
             var offset = (currentPage - 1) * _perPage;
