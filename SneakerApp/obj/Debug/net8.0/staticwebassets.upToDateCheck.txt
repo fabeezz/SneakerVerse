@@ -1,12 +1,27 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\150204C_E_08X1.jpg
+wwwroot\images\a04667c_a_107x1_1.jpg
+wwwroot\images\AIR+JORDAN+1+LOW+PRM.png
+wwwroot\images\AIR+MAX+PLUS+III.png
 wwwroot\images\convesres.jpg
+wwwroot\images\corvette_back.jpg
+wwwroot\images\corvette_front.jpg
 wwwroot\images\favicon.jpg
+wwwroot\images\FCB+MNK+DFADV+JSYSS+MATCH+AW.jpeg
+wwwroot\images\fendi.jpg
 wwwroot\images\jordan1.jpg
+wwwroot\images\livehacking.jpg
+wwwroot\images\M+NRG+NOCTA+CS+HOODIE+FLC.jpeg
+wwwroot\images\n9cdkf042ade1.jpg
 wwwroot\images\nike.jpg
+wwwroot\images\NIKE+CITY+CLASSIC+BOOT+PRM+WP.png
+wwwroot\images\resume.png
 wwwroot\images\rick.jpg
 wwwroot\images\rick.webp
 wwwroot\images\Screenshot 2023-09-21 205408.png
+wwwroot\images\side.jpg
+wwwroot\images\unibuc_logo.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

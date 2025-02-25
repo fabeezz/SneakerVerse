@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IkxrzAv3nFZD5ijzI9pZ1rGMnOd6K5EO+3q5hRLs+MU=",
+  "Hash": "xqZW3YBLKaliBHQVWU3KyBvHcI5XPEYCfyXlqKiwss0=",
   "Source": "SneakerApp",
   "BasePath": "_content/SneakerApp",
   "Mode": "Default",
@@ -1361,6 +1361,90 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\150204C_E_08X1.jpg",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/150204C_E_08X1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2650exd8xu",
+      "Integrity": "KtwEFgfi54cYWCrH08adhqLqjXoYlkiaMBx2zOIKQx4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\150204C_E_08X1.jpg"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\a04667c_a_107x1_1.jpg",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/a04667c_a_107x1_1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ihfcn891yl",
+      "Integrity": "ZkCHt64X8dYlke3t4T+yl7KM/OuTwp1qaCsm0SaWocE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a04667c_a_107x1_1.jpg"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\AIR+JORDAN+1+LOW+PRM.png",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/AIR+JORDAN+1+LOW+PRM#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bj2dpgobse",
+      "Integrity": "F4duu9VpB6kxO80IR8RIes4GGdnG0VZmFXvYRc2u6AU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\AIR+JORDAN+1+LOW+PRM.png"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\AIR+MAX+PLUS+III.png",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/AIR+MAX+PLUS+III#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6o9m6vfggi",
+      "Integrity": "dmyxTj9cptpdNoHUDyrdEea1OmMAIwoqsLAF6MML6gI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\AIR+MAX+PLUS+III.png"
+    },
+    {
       "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\convesres.jpg",
       "SourceId": "SneakerApp",
       "SourceType": "Discovered",
@@ -1380,6 +1464,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\convesres.jpg"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\corvette_back.jpg",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/corvette_back#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9wps77cjss",
+      "Integrity": "5yru9mFOBU6TJot3Oq/RAcbGDH2pFk66rWHX6wFM1TU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\corvette_back.jpg"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\corvette_front.jpg",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/corvette_front#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f1xgh7eduf",
+      "Integrity": "Q1jAXiSwvbNNQz9BbnkHoKDiZ3NU3TGxyVamKGutkRU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\corvette_front.jpg"
     },
     {
       "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\favicon.jpg",
@@ -1403,6 +1529,48 @@
       "OriginalItemSpec": "wwwroot\\images\\favicon.jpg"
     },
     {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\FCB+MNK+DFADV+JSYSS+MATCH+AW.jpeg",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/FCB+MNK+DFADV+JSYSS+MATCH+AW#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "htbd5jhsi1",
+      "Integrity": "6yEnbFdxgNqyzZKF+H5l7aqKHsD/iT7Ggub/R+yfvUw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\FCB+MNK+DFADV+JSYSS+MATCH+AW.jpeg"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\fendi.jpg",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/fendi#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "q7r8q0wsu1",
+      "Integrity": "xpVzW8Kbf/5v43xZYEyBPOMnc9RKsSYvMxKwM5f3lZs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fendi.jpg"
+    },
+    {
       "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\jordan1.jpg",
       "SourceId": "SneakerApp",
       "SourceType": "Discovered",
@@ -1424,6 +1592,69 @@
       "OriginalItemSpec": "wwwroot\\images\\jordan1.jpg"
     },
     {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\livehacking.jpg",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/livehacking#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "z67f3tbefi",
+      "Integrity": "K3nwX/c6vTZZJrAoneY5Dm16xo2eRKrVJ0r6D+zkE3o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\livehacking.jpg"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\M+NRG+NOCTA+CS+HOODIE+FLC.jpeg",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/M+NRG+NOCTA+CS+HOODIE+FLC#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nm8zz9u2f1",
+      "Integrity": "kcJiLOg6nDOM3XEIPh+VV9hN17QXh941aS/vjwzu9Hs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\M+NRG+NOCTA+CS+HOODIE+FLC.jpeg"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\n9cdkf042ade1.jpg",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/n9cdkf042ade1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xgx8oe5j3v",
+      "Integrity": "j4R08WpTqkqg4MmIBqqpWl6jgKvdmMVnuqURVWT6Gh0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\n9cdkf042ade1.jpg"
+    },
+    {
       "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\nike.jpg",
       "SourceId": "SneakerApp",
       "SourceType": "Discovered",
@@ -1443,6 +1674,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\nike.jpg"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\NIKE+CITY+CLASSIC+BOOT+PRM+WP.png",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/NIKE+CITY+CLASSIC+BOOT+PRM+WP#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qgmdmf7ace",
+      "Integrity": "Bus2ozmspM2/kcrCPejMYK4NyIlCKjWW4GamhXA2utQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\NIKE+CITY+CLASSIC+BOOT+PRM+WP.png"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\resume.png",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/resume#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2mapcqj773",
+      "Integrity": "+iUPDipfgYlIgnoQbwps2FiUWgOymmC67hcXexuNDqo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\resume.png"
     },
     {
       "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\rick.jpg",
@@ -1506,6 +1779,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Screenshot 2023-09-21 205408.png"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\side.jpg",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/side#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zgrj89y2cc",
+      "Integrity": "LYLcBe8jfnjh1AHsMZvd0d0LSNmKYTPT5SpAxOCXMMo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\side.jpg"
+    },
+    {
+      "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\unibuc_logo.jpg",
+      "SourceId": "SneakerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\",
+      "BasePath": "_content/SneakerApp",
+      "RelativePath": "images/unibuc_logo#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lb92u00356",
+      "Integrity": "sTn6C1uU9xdz/+MJVP+H/arZzxabHzO/j5Fuc9nbjI4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\unibuc_logo.jpg"
     },
     {
       "Identity": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\js\\site.js",
@@ -5112,6 +5427,334 @@
       ]
     },
     {
+      "Route": "images/150204C_E_08X1.2650exd8xu.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\150204C_E_08X1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KtwEFgfi54cYWCrH08adhqLqjXoYlkiaMBx2zOIKQx4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 12:54:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2650exd8xu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/150204C_E_08X1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KtwEFgfi54cYWCrH08adhqLqjXoYlkiaMBx2zOIKQx4="
+        }
+      ]
+    },
+    {
+      "Route": "images/150204C_E_08X1.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\150204C_E_08X1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KtwEFgfi54cYWCrH08adhqLqjXoYlkiaMBx2zOIKQx4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 12:54:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KtwEFgfi54cYWCrH08adhqLqjXoYlkiaMBx2zOIKQx4="
+        }
+      ]
+    },
+    {
+      "Route": "images/a04667c_a_107x1_1.ihfcn891yl.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\a04667c_a_107x1_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "101952"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZkCHt64X8dYlke3t4T+yl7KM/OuTwp1qaCsm0SaWocE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:13:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ihfcn891yl"
+        },
+        {
+          "Name": "label",
+          "Value": "images/a04667c_a_107x1_1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZkCHt64X8dYlke3t4T+yl7KM/OuTwp1qaCsm0SaWocE="
+        }
+      ]
+    },
+    {
+      "Route": "images/a04667c_a_107x1_1.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\a04667c_a_107x1_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "101952"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZkCHt64X8dYlke3t4T+yl7KM/OuTwp1qaCsm0SaWocE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:13:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZkCHt64X8dYlke3t4T+yl7KM/OuTwp1qaCsm0SaWocE="
+        }
+      ]
+    },
+    {
+      "Route": "images/AIR+JORDAN+1+LOW+PRM.bj2dpgobse.png",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\AIR+JORDAN+1+LOW+PRM.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110870"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F4duu9VpB6kxO80IR8RIes4GGdnG0VZmFXvYRc2u6AU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:52:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bj2dpgobse"
+        },
+        {
+          "Name": "label",
+          "Value": "images/AIR+JORDAN+1+LOW+PRM.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F4duu9VpB6kxO80IR8RIes4GGdnG0VZmFXvYRc2u6AU="
+        }
+      ]
+    },
+    {
+      "Route": "images/AIR+JORDAN+1+LOW+PRM.png",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\AIR+JORDAN+1+LOW+PRM.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110870"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F4duu9VpB6kxO80IR8RIes4GGdnG0VZmFXvYRc2u6AU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:52:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F4duu9VpB6kxO80IR8RIes4GGdnG0VZmFXvYRc2u6AU="
+        }
+      ]
+    },
+    {
+      "Route": "images/AIR+MAX+PLUS+III.6o9m6vfggi.png",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\AIR+MAX+PLUS+III.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "159702"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dmyxTj9cptpdNoHUDyrdEea1OmMAIwoqsLAF6MML6gI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 12:57:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6o9m6vfggi"
+        },
+        {
+          "Name": "label",
+          "Value": "images/AIR+MAX+PLUS+III.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dmyxTj9cptpdNoHUDyrdEea1OmMAIwoqsLAF6MML6gI="
+        }
+      ]
+    },
+    {
+      "Route": "images/AIR+MAX+PLUS+III.png",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\AIR+MAX+PLUS+III.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "159702"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dmyxTj9cptpdNoHUDyrdEea1OmMAIwoqsLAF6MML6gI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 12:57:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dmyxTj9cptpdNoHUDyrdEea1OmMAIwoqsLAF6MML6gI="
+        }
+      ]
+    },
+    {
       "Route": "images/convesres.jpg",
       "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\convesres.jpg",
       "Selectors": [],
@@ -5134,7 +5777,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 13 Jan 2025 18:49:54 GMT"
+          "Value": "Fri, 17 Jan 2025 12:52:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5171,7 +5814,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 13 Jan 2025 18:49:54 GMT"
+          "Value": "Fri, 17 Jan 2025 12:52:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5190,6 +5833,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Uiw+kbZSFs2mNTQU8U2eazzYQTU07zGozIwnmBDIFxc="
+        }
+      ]
+    },
+    {
+      "Route": "images/corvette_back.9wps77cjss.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\corvette_back.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1006730"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5yru9mFOBU6TJot3Oq/RAcbGDH2pFk66rWHX6wFM1TU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:44:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9wps77cjss"
+        },
+        {
+          "Name": "label",
+          "Value": "images/corvette_back.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5yru9mFOBU6TJot3Oq/RAcbGDH2pFk66rWHX6wFM1TU="
+        }
+      ]
+    },
+    {
+      "Route": "images/corvette_back.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\corvette_back.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1006730"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5yru9mFOBU6TJot3Oq/RAcbGDH2pFk66rWHX6wFM1TU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:44:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5yru9mFOBU6TJot3Oq/RAcbGDH2pFk66rWHX6wFM1TU="
+        }
+      ]
+    },
+    {
+      "Route": "images/corvette_front.f1xgh7eduf.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\corvette_front.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1088061"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q1jAXiSwvbNNQz9BbnkHoKDiZ3NU3TGxyVamKGutkRU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 17:23:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f1xgh7eduf"
+        },
+        {
+          "Name": "label",
+          "Value": "images/corvette_front.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q1jAXiSwvbNNQz9BbnkHoKDiZ3NU3TGxyVamKGutkRU="
+        }
+      ]
+    },
+    {
+      "Route": "images/corvette_front.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\corvette_front.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1088061"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q1jAXiSwvbNNQz9BbnkHoKDiZ3NU3TGxyVamKGutkRU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 17:23:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q1jAXiSwvbNNQz9BbnkHoKDiZ3NU3TGxyVamKGutkRU="
         }
       ]
     },
@@ -5276,6 +6083,170 @@
       ]
     },
     {
+      "Route": "images/FCB+MNK+DFADV+JSYSS+MATCH+AW.htbd5jhsi1.jpeg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\FCB+MNK+DFADV+JSYSS+MATCH+AW.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "148704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6yEnbFdxgNqyzZKF+H5l7aqKHsD/iT7Ggub/R+yfvUw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:08:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "htbd5jhsi1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/FCB+MNK+DFADV+JSYSS+MATCH+AW.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6yEnbFdxgNqyzZKF+H5l7aqKHsD/iT7Ggub/R+yfvUw="
+        }
+      ]
+    },
+    {
+      "Route": "images/FCB+MNK+DFADV+JSYSS+MATCH+AW.jpeg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\FCB+MNK+DFADV+JSYSS+MATCH+AW.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "148704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6yEnbFdxgNqyzZKF+H5l7aqKHsD/iT7Ggub/R+yfvUw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:08:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6yEnbFdxgNqyzZKF+H5l7aqKHsD/iT7Ggub/R+yfvUw="
+        }
+      ]
+    },
+    {
+      "Route": "images/fendi.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\fendi.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "273230"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xpVzW8Kbf/5v43xZYEyBPOMnc9RKsSYvMxKwM5f3lZs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 17:38:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xpVzW8Kbf/5v43xZYEyBPOMnc9RKsSYvMxKwM5f3lZs="
+        }
+      ]
+    },
+    {
+      "Route": "images/fendi.q7r8q0wsu1.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\fendi.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "273230"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xpVzW8Kbf/5v43xZYEyBPOMnc9RKsSYvMxKwM5f3lZs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 17:38:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q7r8q0wsu1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/fendi.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xpVzW8Kbf/5v43xZYEyBPOMnc9RKsSYvMxKwM5f3lZs="
+        }
+      ]
+    },
+    {
       "Route": "images/jordan1.jpg",
       "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\jordan1.jpg",
       "Selectors": [],
@@ -5358,6 +6329,252 @@
       ]
     },
     {
+      "Route": "images/livehacking.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\livehacking.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "341902"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K3nwX/c6vTZZJrAoneY5Dm16xo2eRKrVJ0r6D+zkE3o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 17:24:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-K3nwX/c6vTZZJrAoneY5Dm16xo2eRKrVJ0r6D+zkE3o="
+        }
+      ]
+    },
+    {
+      "Route": "images/livehacking.z67f3tbefi.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\livehacking.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "341902"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K3nwX/c6vTZZJrAoneY5Dm16xo2eRKrVJ0r6D+zkE3o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 17:24:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z67f3tbefi"
+        },
+        {
+          "Name": "label",
+          "Value": "images/livehacking.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-K3nwX/c6vTZZJrAoneY5Dm16xo2eRKrVJ0r6D+zkE3o="
+        }
+      ]
+    },
+    {
+      "Route": "images/M+NRG+NOCTA+CS+HOODIE+FLC.jpeg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\M+NRG+NOCTA+CS+HOODIE+FLC.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "304765"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kcJiLOg6nDOM3XEIPh+VV9hN17QXh941aS/vjwzu9Hs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:00:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kcJiLOg6nDOM3XEIPh+VV9hN17QXh941aS/vjwzu9Hs="
+        }
+      ]
+    },
+    {
+      "Route": "images/M+NRG+NOCTA+CS+HOODIE+FLC.nm8zz9u2f1.jpeg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\M+NRG+NOCTA+CS+HOODIE+FLC.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "304765"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kcJiLOg6nDOM3XEIPh+VV9hN17QXh941aS/vjwzu9Hs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:00:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nm8zz9u2f1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/M+NRG+NOCTA+CS+HOODIE+FLC.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kcJiLOg6nDOM3XEIPh+VV9hN17QXh941aS/vjwzu9Hs="
+        }
+      ]
+    },
+    {
+      "Route": "images/n9cdkf042ade1.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\n9cdkf042ade1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20629276"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j4R08WpTqkqg4MmIBqqpWl6jgKvdmMVnuqURVWT6Gh0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:23:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-j4R08WpTqkqg4MmIBqqpWl6jgKvdmMVnuqURVWT6Gh0="
+        }
+      ]
+    },
+    {
+      "Route": "images/n9cdkf042ade1.xgx8oe5j3v.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\n9cdkf042ade1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20629276"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j4R08WpTqkqg4MmIBqqpWl6jgKvdmMVnuqURVWT6Gh0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:23:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xgx8oe5j3v"
+        },
+        {
+          "Name": "label",
+          "Value": "images/n9cdkf042ade1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-j4R08WpTqkqg4MmIBqqpWl6jgKvdmMVnuqURVWT6Gh0="
+        }
+      ]
+    },
+    {
       "Route": "images/nike.jpg",
       "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\nike.jpg",
       "Selectors": [],
@@ -5380,7 +6597,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 13 Jan 2025 18:46:41 GMT"
+          "Value": "Fri, 17 Jan 2025 12:49:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5417,7 +6634,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 13 Jan 2025 18:46:41 GMT"
+          "Value": "Fri, 17 Jan 2025 12:49:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5436,6 +6653,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-5ESQ4WpSxGsl9shPbxOB4BHVeejwx0UH8dQu5b6QJSU="
+        }
+      ]
+    },
+    {
+      "Route": "images/NIKE+CITY+CLASSIC+BOOT+PRM+WP.png",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\NIKE+CITY+CLASSIC+BOOT+PRM+WP.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "96912"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bus2ozmspM2/kcrCPejMYK4NyIlCKjWW4GamhXA2utQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:02:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Bus2ozmspM2/kcrCPejMYK4NyIlCKjWW4GamhXA2utQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/NIKE+CITY+CLASSIC+BOOT+PRM+WP.qgmdmf7ace.png",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\NIKE+CITY+CLASSIC+BOOT+PRM+WP.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "96912"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bus2ozmspM2/kcrCPejMYK4NyIlCKjWW4GamhXA2utQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:02:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qgmdmf7ace"
+        },
+        {
+          "Name": "label",
+          "Value": "images/NIKE+CITY+CLASSIC+BOOT+PRM+WP.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Bus2ozmspM2/kcrCPejMYK4NyIlCKjWW4GamhXA2utQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/resume.2mapcqj773.png",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\resume.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "466940"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+iUPDipfgYlIgnoQbwps2FiUWgOymmC67hcXexuNDqo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 17:46:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2mapcqj773"
+        },
+        {
+          "Name": "label",
+          "Value": "images/resume.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+iUPDipfgYlIgnoQbwps2FiUWgOymmC67hcXexuNDqo="
+        }
+      ]
+    },
+    {
+      "Route": "images/resume.png",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\resume.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "466940"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+iUPDipfgYlIgnoQbwps2FiUWgOymmC67hcXexuNDqo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 17:46:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+iUPDipfgYlIgnoQbwps2FiUWgOymmC67hcXexuNDqo="
         }
       ]
     },
@@ -5682,6 +7063,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-kLB/zB20G+JWWAIBNqmZt1K6Yr9nDMeLP/OW886BL/8="
+        }
+      ]
+    },
+    {
+      "Route": "images/side.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\side.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "205223"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LYLcBe8jfnjh1AHsMZvd0d0LSNmKYTPT5SpAxOCXMMo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:45:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LYLcBe8jfnjh1AHsMZvd0d0LSNmKYTPT5SpAxOCXMMo="
+        }
+      ]
+    },
+    {
+      "Route": "images/side.zgrj89y2cc.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\side.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "205223"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LYLcBe8jfnjh1AHsMZvd0d0LSNmKYTPT5SpAxOCXMMo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 17 Jan 2025 13:45:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zgrj89y2cc"
+        },
+        {
+          "Name": "label",
+          "Value": "images/side.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LYLcBe8jfnjh1AHsMZvd0d0LSNmKYTPT5SpAxOCXMMo="
+        }
+      ]
+    },
+    {
+      "Route": "images/unibuc_logo.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\unibuc_logo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10665"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sTn6C1uU9xdz/+MJVP+H/arZzxabHzO/j5Fuc9nbjI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 17:45:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sTn6C1uU9xdz/+MJVP+H/arZzxabHzO/j5Fuc9nbjI4="
+        }
+      ]
+    },
+    {
+      "Route": "images/unibuc_logo.lb92u00356.jpg",
+      "AssetFile": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\unibuc_logo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10665"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sTn6C1uU9xdz/+MJVP+H/arZzxabHzO/j5Fuc9nbjI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 17:45:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lb92u00356"
+        },
+        {
+          "Name": "label",
+          "Value": "images/unibuc_logo.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sTn6C1uU9xdz/+MJVP+H/arZzxabHzO/j5Fuc9nbjI4="
         }
       ]
     },

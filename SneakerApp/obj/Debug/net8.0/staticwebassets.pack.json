@@ -13,24 +13,76 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\150204C_E_08X1.jpg",
+      "PackagePath": "staticwebassets\\images\\150204C_E_08X1.jpg"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\AIR+JORDAN+1+LOW+PRM.png",
+      "PackagePath": "staticwebassets\\images\\AIR+JORDAN+1+LOW+PRM.png"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\AIR+MAX+PLUS+III.png",
+      "PackagePath": "staticwebassets\\images\\AIR+MAX+PLUS+III.png"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\FCB+MNK+DFADV+JSYSS+MATCH+AW.jpeg",
+      "PackagePath": "staticwebassets\\images\\FCB+MNK+DFADV+JSYSS+MATCH+AW.jpeg"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\M+NRG+NOCTA+CS+HOODIE+FLC.jpeg",
+      "PackagePath": "staticwebassets\\images\\M+NRG+NOCTA+CS+HOODIE+FLC.jpeg"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\NIKE+CITY+CLASSIC+BOOT+PRM+WP.png",
+      "PackagePath": "staticwebassets\\images\\NIKE+CITY+CLASSIC+BOOT+PRM+WP.png"
+    },
+    {
       "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\Screenshot 2023-09-21 205408.png",
       "PackagePath": "staticwebassets\\images\\Screenshot 2023-09-21 205408.png"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\a04667c_a_107x1_1.jpg",
+      "PackagePath": "staticwebassets\\images\\a04667c_a_107x1_1.jpg"
     },
     {
       "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\convesres.jpg",
       "PackagePath": "staticwebassets\\images\\convesres.jpg"
     },
     {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\corvette_back.jpg",
+      "PackagePath": "staticwebassets\\images\\corvette_back.jpg"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\corvette_front.jpg",
+      "PackagePath": "staticwebassets\\images\\corvette_front.jpg"
+    },
+    {
       "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\favicon.jpg",
       "PackagePath": "staticwebassets\\images\\favicon.jpg"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\fendi.jpg",
+      "PackagePath": "staticwebassets\\images\\fendi.jpg"
     },
     {
       "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\jordan1.jpg",
       "PackagePath": "staticwebassets\\images\\jordan1.jpg"
     },
     {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\livehacking.jpg",
+      "PackagePath": "staticwebassets\\images\\livehacking.jpg"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\n9cdkf042ade1.jpg",
+      "PackagePath": "staticwebassets\\images\\n9cdkf042ade1.jpg"
+    },
+    {
       "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\nike.jpg",
       "PackagePath": "staticwebassets\\images\\nike.jpg"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\resume.png",
+      "PackagePath": "staticwebassets\\images\\resume.png"
     },
     {
       "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\rick.jpg",
@@ -39,6 +91,14 @@
     {
       "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\rick.webp",
       "PackagePath": "staticwebassets\\images\\rick.webp"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\side.jpg",
+      "PackagePath": "staticwebassets\\images\\side.jpg"
+    },
+    {
+      "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\images\\unibuc_logo.jpg",
+      "PackagePath": "staticwebassets\\images\\unibuc_logo.jpg"
     },
     {
       "Id": "D:\\FMI\\SneakerVerse\\SneakerApp\\wwwroot\\js\\site.js",
